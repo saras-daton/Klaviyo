@@ -1,41 +1,19 @@
-
 {% if var('KlaviyoBouncedEmail') %}
 {{ config( enabled = True ) }}
 {% else %}
 {{ config( enabled = False ) }}
 {% endif %}
 
-{% set relations = dbt_utils.get_relations_by_pattern(
-schema_pattern=var('raw_schema'),
-table_pattern=var('klaviyo_bounced_email_tbl_ptrn'),
-exclude=var('klaviyo_bounced_email_tbl_exclude_ptrn'),
-database=var('raw_database')) %}
-
-{% for i in relations %}
-        {% if var('get_brandname_from_tablename_flag') %}
-            {% set brand =replace(i,'`','').split('.')[2].split('_')[var('brandname_position_in_tablename')] %}
-        {% else %}
-            {% set brand = var('default_brandname') %}
-        {% endif %}
-
-        {% if var('get_storename_from_tablename_flag') %}
-            {% set store =replace(i,'`','').split('.')[2].split('_')[var('storename_position_in_tablename')] %}
-        {% else %}
-            {% set store = var('default_storename') %}
-        {% endif %}
-
-        {% if var('timezone_conversion_flag') and i.lower() in tables_lowercase_list and i in var('raw_table_timezone_offset_hours') %}
-            {% set hr = var('raw_table_timezone_offset_hours')[i] %}
-        {% else %}
-            {% set hr = 0 %}
-        {% endif %}
-
+{# /*--calling macro for tables list and remove exclude pattern */ #}
+{% set result =set_table_name('klaviyo_bounced_email_tbl_ptrn','%klaviyo%bounced_email','klaviyo_bounced_email_tbl_exclude_ptrn','') %}
+{# /*--iterating through all the tables */ #}
+{% for i in result %}
 
         select
-        '{{brand|replace("`","")}}' as brand,
-        '{{store|replace("`","")}}' as store,
+        {{ extract_brand_and_store_name_from_table(i, var('brandname_position_in_tablename'), var('get_brandname_from_tablename_flag'), var('default_brandname')) }} as brand,
+        {{ extract_brand_and_store_name_from_table(i, var('storename_position_in_tablename'), var('get_storename_from_tablename_flag'), var('default_storename')) }} as store,
         a.type,
-        coalesce(id, 'NA') as id,
+        id,
         {{extract_nested_value("attributes","metric_id","string")}} as attributes_metric_id,
         {{extract_nested_value("attributes","profile_id","string")}} as attributes_profile_id,
         timestamp_seconds({{extract_nested_value("attributes","timestamp","BIGINT")}}) as attributes_timestamp,
@@ -70,7 +48,7 @@ database=var('raw_database')) %}
         {{extract_nested_value("attribution","group_ids","string")}} as attribution_group_ids,
         {{extract_nested_value("attribution","experiment","string")}} as attribution_experiment,
         {{extract_nested_value("attribution","attributed_channel","string")}} as attribution_attributed_channel,
-        cast({{ dbt.dateadd(datepart="hour", interval=hr, from_date_or_timestamp= "cast(datetime as timestamp)") }} as {{ dbt.type_timestamp() }}) as datetime,
+        {{timezone_conversion('replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00")')}} as datetime,
         {{extract_nested_value("attributes","uuid","string")}} as attributes_uuid,
         {{extract_nested_value("links","self","string")}} as links_self,
         {{daton_user_id()}} as _daton_user_id,
@@ -85,11 +63,11 @@ database=var('raw_database')) %}
         {{multi_unnesting("extra","bounce_delivery_info")}}
         {{multi_unnesting("event_properties","attribution")}}
         {{unnesting("links")}}
-            {% if is_incremental() %}
-            {# /* -- this filter will only be applied on an incremental run */ #}
+        {% if is_incremental() %}
+        {# /* -- this filter will only be applied on an incremental run */ #}
             where {{daton_batch_runtime()}}  >= (select coalesce(max(_daton_batch_runtime) - {{ var('klaviyo_bounced_email_lookback') }},0) from {{ this }})
-            {% endif %}
-    qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+        {% endif %}
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
     {% if not loop.last %} union all {% endif %}
 {% endfor %}
 

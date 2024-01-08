@@ -1,0 +1,2654 @@
+[0m12:05:26.786988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0BC3B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0ECF3010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0ECF0490>]}
+
+
+============================== 12:05:26.786988 | fe7a0d03-24ed-4eaf-978c-e3342e5476a0 ==============================
+[0m12:05:26.786988 [info ] [MainThread]: Running with dbt=1.7.0
+[0m12:05:26.786988 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'profiles_dir': 'Profiles', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh --select KlaviyoBouncedEmail --profiles-dir Profiles', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:05:29.926708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fe7a0d03-24ed-4eaf-978c-e3342e5476a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0ECF01C0>]}
+[0m12:05:30.004632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fe7a0d03-24ed-4eaf-978c-e3342e5476a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0ECB6A10>]}
+[0m12:05:30.004632 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m12:05:30.004632 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found 3 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m12:05:30.004632 [debug] [MainThread]: Command `dbt run` failed at 12:05:30.004632 after 3.29 seconds
+[0m12:05:30.004632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D0BC3B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D1FB9D7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D1FB9C580>]}
+[0m12:05:30.004632 [debug] [MainThread]: Flushing usage events
+[0m12:06:31.883197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161848B700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B507BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B5079A0>]}
+
+
+============================== 12:06:31.883197 | a6263095-5e91-4d10-9fe0-e44e6078d0fe ==============================
+[0m12:06:31.883197 [info ] [MainThread]: Running with dbt=1.7.0
+[0m12:06:31.883197 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\91809\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt deps', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:06:32.049271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6263095-5e91-4d10-9fe0-e44e6078d0fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B507C40>]}
+[0m12:06:32.049271 [debug] [MainThread]: Set downloads directory='C:\Users\91809\AppData\Local\Temp\dbt-downloads-yojzhusx'
+[0m12:06:32.049271 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:06:32.431971 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:06:32.431971 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m12:06:32.683904 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m12:06:32.700782 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Saras-Daton/currency_exchange_rates.json
+[0m12:06:33.451305 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Saras-Daton/currency_exchange_rates.json 200
+[0m12:06:33.451305 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m12:06:33.923811 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m12:06:33.923811 [info ] [MainThread]: Updating lock file in file path: C:\Users\91809\GitHub\klaviyo/package-lock.yml
+[0m12:06:33.939321 [debug] [MainThread]: Set downloads directory='C:\Users\91809\AppData\Local\Temp\dbt-downloads-dar_hbyo'
+[0m12:06:33.939321 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m12:06:40.596088 [info ] [MainThread]: Installed from version 0.8.5
+[0m12:06:40.596088 [info ] [MainThread]: Updated version available: 0.10.1
+[0m12:06:40.596088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a6263095-5e91-4d10-9fe0-e44e6078d0fe', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B647FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B645F60>]}
+[0m12:06:40.596088 [info ] [MainThread]: Installing Saras-Daton/currency_exchange_rates
+[0m12:06:41.284283 [info ] [MainThread]: Installed from version 1.0.2
+[0m12:06:41.295063 [info ] [MainThread]: Updated version available: 1.1.3
+[0m12:06:41.295063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a6263095-5e91-4d10-9fe0-e44e6078d0fe', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B6442E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B6458D0>]}
+[0m12:06:41.295063 [info ] [MainThread]: Installing calogica/dbt_date
+[0m12:06:41.959109 [info ] [MainThread]: Installed from version 0.7.2
+[0m12:06:41.959109 [info ] [MainThread]: Updated version available: 0.10.0
+[0m12:06:41.959109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a6263095-5e91-4d10-9fe0-e44e6078d0fe', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B6468C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B6440D0>]}
+[0m12:06:41.974739 [info ] [MainThread]: 
+[0m12:06:41.974739 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'Saras-Daton/currency_exchange_rates', 'calogica/dbt_date']                 
+Update your versions in packages.yml, then run dbt deps
+[0m12:06:41.983820 [debug] [MainThread]: Command `dbt deps` succeeded at 12:06:41.983820 after 10.12 seconds
+[0m12:06:41.985904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161848B700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B507B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002161B588580>]}
+[0m12:06:41.986817 [debug] [MainThread]: Flushing usage events
+[0m12:06:48.672264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F61E5B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F64F13010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F64F10490>]}
+
+
+============================== 12:06:48.672264 | a95ab479-85c8-4ef7-b4be-39035fcf6fc2 ==============================
+[0m12:06:48.672264 [info ] [MainThread]: Running with dbt=1.7.0
+[0m12:06:48.672264 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'fail_fast': 'False', 'profiles_dir': 'Profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --full-refresh --select KlaviyoBouncedEmail --profiles-dir Profiles', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:06:50.199863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F64F5F670>]}
+[0m12:06:50.278861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F757D7970>]}
+[0m12:06:50.278861 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m12:06:50.353984 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m12:06:50.356438 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:06:50.356438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F75E32320>]}
+[0m12:06:54.211314 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m12:06:54.229642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F76393D30>]}
+[0m12:06:54.287735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F763939D0>]}
+[0m12:06:54.287735 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m12:06:54.287735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F76392170>]}
+[0m12:06:54.287735 [info ] [MainThread]: 
+[0m12:06:54.299867 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:06:54.303495 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m12:06:54.303495 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:55.850492 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m12:06:55.850492 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:55.850492 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m12:06:55.850492 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:56.954884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F76392C80>]}
+[0m12:06:56.954884 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m12:06:56.954884 [info ] [MainThread]: 
+[0m12:06:56.971127 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:06:56.971127 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoBouncedEmail ..................... [RUN]
+[0m12:06:56.971127 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoBouncedEmail'
+[0m12:06:56.979906 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoBouncedEmail
+[0m12:06:56.997984 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:06:57.037315 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%bounced_email'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m12:06:59.162600 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:7914cc2a-2d5c-468c-8a37-685032077ecf&page=queryresults
+[0m12:07:01.559787 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:07:01.559787 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (compile): 12:06:56.979906 => 12:07:01.559787
+[0m12:07:01.559787 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoBouncedEmail
+[0m12:07:02.179417 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:07:02.191567 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+
+  
+    
+
+    create or replace table `edm-saras`.`edm`.`KlaviyoBouncedEmail`
+      
+    partition by timestamp_trunc(datetime, day)
+    
+
+    OPTIONS()
+    as (
+      
+
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        a.type,
+        coalesce(id) as id,
+        
+
+    
+    cast(attributes.metric_id as string)
+    
+    
+ as attributes_metric_id,
+        
+
+    
+    cast(attributes.profile_id as string)
+    
+    
+ as attributes_profile_id,
+        timestamp_seconds(
+
+    
+    cast(attributes.timestamp as BIGINT)
+    
+    
+) as attributes_timestamp,
+        
+
+    
+    cast(event_properties.Subject as string)
+    
+    
+ as event_properties_Subject,
+        
+
+    
+    cast(event_properties.Campaign_Name as string)
+    
+    
+ as event_properties_Campaign_Name,
+        
+
+    
+    cast(event_properties.flow as string)
+    
+    
+ as event_properties_flow,
+        
+
+    
+    cast(event_properties.message as string)
+    
+    
+ as event_properties_message,
+        
+
+    
+    cast(event_properties.Email_Domain as string)
+    
+    
+ as event_properties_Email_Domain,
+        
+
+    
+    cast(event_properties.cohort_message_send_cohort as string)
+    
+    
+ as event_properties_cohort_message_send_cohort,
+        
+
+    
+    cast(event_properties.Bounce_Type as string)
+    
+    
+ as event_properties_bounce_type,
+        
+
+    
+    cast(event_properties.ESP as numeric)
+    
+    
+ as event_properties_ESP,
+        
+
+    
+    cast(event_properties.group_ids as string)
+    
+    
+ as event_properties_group_ids,
+        
+
+    
+    cast(event_properties.event_id as string)
+    
+    
+ as event_properties_event_id,
+        
+
+    
+    cast(event_properties.variation as string)
+    
+    
+ as event_properties_variation,
+        
+
+    
+    cast(event_properties.cohort_variation_send_cohort as string)
+    
+    
+ as event_properties_cohort_variation_send_cohort,
+        
+
+    
+    cast(event_properties.experiment as string)
+    
+    
+ as event_properties_experiment,
+        
+
+    
+    cast(event_properties.klaviyo_bounce_category as string)
+    
+    
+ as event_properties_klaviyo_bounce_category,
+        
+
+    
+    cast(event_properties.`Inbox Provider` as string)
+    
+    
+ as event_properties_Inbox_Provider,
+        
+
+    
+    cast(bounce_delivery_info.add_exclusion as boolean)
+    
+    
+ as bounce_delivery_info_add_exclusion,
+        
+
+    
+    cast(bounce_delivery_info.is_autoresponder as boolean)
+    
+    
+ as bounce_delivery_info_is_autoresponder,
+        
+
+    
+    cast(bounce_delivery_info.reason as string)
+    
+    
+ as bounce_delivery_info_reason,
+        
+
+    
+    cast(bounce_delivery_info.type as string)
+    
+    
+ as bounce_delivery_info_type,
+        
+
+    
+    cast(bounce_delivery_info.action_id as string)
+    
+    
+ as bounce_delivery_info_action_id,
+        
+
+    
+    cast(bounce_delivery_info.ip as string)
+    
+    
+ as bounce_delivery_info_ip,
+        
+
+    
+    cast(bounce_delivery_info.code as string)
+    
+    
+ as bounce_delivery_info_code,
+        
+
+    
+    cast(bounce_delivery_info.rigidity as string)
+    
+    
+ as bounce_delivery_info_rigidity,
+        
+
+    
+    cast(attribution.attributed_event_id as string)
+    
+    
+ as attribution_attributed_event_id,
+        
+
+    
+    cast(attribution.send_ts as numeric)
+    
+    
+ as attribution_send_ts,
+        
+
+    
+    cast(attribution.message as string)
+    
+    
+ as attribution_message,
+        
+
+    
+    cast(attribution.flow as string)
+    
+    
+ as attribution_flow,
+        
+
+    
+    cast(attribution.variation as string)
+    
+    
+ as attribution_variation,
+        
+
+    
+    cast(attribution.group_ids as string)
+    
+    
+ as attribution_group_ids,
+        
+
+    
+    cast(attribution.experiment as string)
+    
+    
+ as attribution_experiment,
+        
+
+    
+    cast(attribution.attributed_channel as string)
+    
+    
+ as attribution_attributed_channel,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as datetime,
+        
+
+    
+    cast(attributes.uuid as string)
+    
+    
+ as attributes_uuid,
+        
+
+    
+    cast(links.self as string)
+    
+    
+ as links_self,
+        
+
+    
+        _daton_user_id
+    
+
+ as _daton_user_id,
+        
+
+    
+        _daton_batch_runtime
+    
+
+ as _daton_batch_runtime,
+        
+    
+    
+        _daton_batch_id
+    
+
+ as _daton_batch_id,
+        current_timestamp() as _last_updated,
+        'manual' as _run_id
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_bounced_email a
+        
+
+    
+    left join unnest(attributes) as attributes
+    
+    
+
+        
+
+    
+    left join unnest(attributes.event_properties) event_properties
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.extra) extra
+    
+    
+
+        
+
+    
+    left join unnest(extra.bounce_delivery_info) bounce_delivery_info
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.attribution) attribution
+    
+    
+
+        
+
+    
+    left join unnest(links) as links
+    
+    
+
+        
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+    );
+  
+[0m12:07:02.983559 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:8ac9ecdd-a1dd-4122-b488-d3f527aec71f&page=queryresults
+[0m12:07:28.385435 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (execute): 12:07:01.559787 => 12:07:28.385435
+[0m12:07:28.385435 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a95ab479-85c8-4ef7-b4be-39035fcf6fc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F762C3340>]}
+[0m12:07:28.385435 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoBouncedEmail ................ [[32mCREATE TABLE (228.4k rows, 168.5 MiB processed)[0m in 31.41s]
+[0m12:07:28.401732 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:07:28.401732 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:07:28.401732 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m12:07:28.401732 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m12:07:28.401732 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m12:07:28.401732 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoBouncedEmail' was properly closed.
+[0m12:07:28.407351 [info ] [MainThread]: 
+[0m12:07:28.407351 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 34.11 seconds (34.11s).
+[0m12:07:28.410211 [debug] [MainThread]: Command end result
+[0m12:07:28.430387 [info ] [MainThread]: 
+[0m12:07:28.430387 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:07:28.430387 [info ] [MainThread]: 
+[0m12:07:28.430387 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:07:28.430387 [debug] [MainThread]: Command `dbt run` succeeded at 12:07:28.430387 after 39.81 seconds
+[0m12:07:28.430387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F61E5B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F76163E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016F76291600>]}
+[0m12:07:28.438192 [debug] [MainThread]: Flushing usage events
+[0m12:08:02.277889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9B656A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6B2FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6B1240>]}
+
+
+============================== 12:08:02.277889 | de157cfe-3c26-463b-a574-9f6ec5b2137c ==============================
+[0m12:08:02.277889 [info ] [MainThread]: Running with dbt=1.7.0
+[0m12:08:02.277889 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'fail_fast': 'False', 'profiles_dir': 'Profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select KlaviyoBouncedEmail --profiles-dir Profiles', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:08:03.476307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6FF790>]}
+[0m12:08:03.593485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6777F0>]}
+[0m12:08:03.593485 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m12:08:03.610805 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m12:08:03.879057 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:08:03.880057 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:08:03.882528 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m12:08:03.893446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021BAF9000D0>]}
+[0m12:08:03.928174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021BAF8C3220>]}
+[0m12:08:03.929176 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m12:08:03.931572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021BAF8C3130>]}
+[0m12:08:03.933579 [info ] [MainThread]: 
+[0m12:08:03.935981 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:08:03.938190 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m12:08:03.940150 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:05.658965 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m12:08:05.658965 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m12:08:05.658965 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:05.658965 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:07.024730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021BAF8C1DE0>]}
+[0m12:08:07.024730 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m12:08:07.024730 [info ] [MainThread]: 
+[0m12:08:07.040888 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:07.041707 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoBouncedEmail ..................... [RUN]
+[0m12:08:07.041707 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoBouncedEmail'
+[0m12:08:07.041707 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:07.077046 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:08:07.139991 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%bounced_email'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m12:08:08.921955 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:fb259879-0cc3-4ada-bd71-d59e6c27ecf2&page=queryresults
+[0m12:08:11.048771 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:08:11.048771 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (compile): 12:08:07.041707 => 12:08:11.048771
+[0m12:08:11.048771 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:11.818243 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:08:11.833863 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+-- back compat for old kwarg name
+  
+  
+        
+            
+                
+                
+            
+        
+    
+
+    
+
+    merge into `edm-saras`.`edm`.`KlaviyoBouncedEmail` as DBT_INTERNAL_DEST
+        using (
+
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        a.type,
+        coalesce(id) as id,
+        
+
+    
+    cast(attributes.metric_id as string)
+    
+    
+ as attributes_metric_id,
+        
+
+    
+    cast(attributes.profile_id as string)
+    
+    
+ as attributes_profile_id,
+        timestamp_seconds(
+
+    
+    cast(attributes.timestamp as BIGINT)
+    
+    
+) as attributes_timestamp,
+        
+
+    
+    cast(event_properties.Subject as string)
+    
+    
+ as event_properties_Subject,
+        
+
+    
+    cast(event_properties.Campaign_Name as string)
+    
+    
+ as event_properties_Campaign_Name,
+        
+
+    
+    cast(event_properties.flow as string)
+    
+    
+ as event_properties_flow,
+        
+
+    
+    cast(event_properties.message as string)
+    
+    
+ as event_properties_message,
+        
+
+    
+    cast(event_properties.Email_Domain as string)
+    
+    
+ as event_properties_Email_Domain,
+        
+
+    
+    cast(event_properties.cohort_message_send_cohort as string)
+    
+    
+ as event_properties_cohort_message_send_cohort,
+        
+
+    
+    cast(event_properties.Bounce_Type as string)
+    
+    
+ as event_properties_bounce_type,
+        
+
+    
+    cast(event_properties.ESP as numeric)
+    
+    
+ as event_properties_ESP,
+        
+
+    
+    cast(event_properties.group_ids as string)
+    
+    
+ as event_properties_group_ids,
+        
+
+    
+    cast(event_properties.event_id as string)
+    
+    
+ as event_properties_event_id,
+        
+
+    
+    cast(event_properties.variation as string)
+    
+    
+ as event_properties_variation,
+        
+
+    
+    cast(event_properties.cohort_variation_send_cohort as string)
+    
+    
+ as event_properties_cohort_variation_send_cohort,
+        
+
+    
+    cast(event_properties.experiment as string)
+    
+    
+ as event_properties_experiment,
+        
+
+    
+    cast(event_properties.klaviyo_bounce_category as string)
+    
+    
+ as event_properties_klaviyo_bounce_category,
+        
+
+    
+    cast(event_properties.`Inbox Provider` as string)
+    
+    
+ as event_properties_Inbox_Provider,
+        
+
+    
+    cast(bounce_delivery_info.add_exclusion as boolean)
+    
+    
+ as bounce_delivery_info_add_exclusion,
+        
+
+    
+    cast(bounce_delivery_info.is_autoresponder as boolean)
+    
+    
+ as bounce_delivery_info_is_autoresponder,
+        
+
+    
+    cast(bounce_delivery_info.reason as string)
+    
+    
+ as bounce_delivery_info_reason,
+        
+
+    
+    cast(bounce_delivery_info.type as string)
+    
+    
+ as bounce_delivery_info_type,
+        
+
+    
+    cast(bounce_delivery_info.action_id as string)
+    
+    
+ as bounce_delivery_info_action_id,
+        
+
+    
+    cast(bounce_delivery_info.ip as string)
+    
+    
+ as bounce_delivery_info_ip,
+        
+
+    
+    cast(bounce_delivery_info.code as string)
+    
+    
+ as bounce_delivery_info_code,
+        
+
+    
+    cast(bounce_delivery_info.rigidity as string)
+    
+    
+ as bounce_delivery_info_rigidity,
+        
+
+    
+    cast(attribution.attributed_event_id as string)
+    
+    
+ as attribution_attributed_event_id,
+        
+
+    
+    cast(attribution.send_ts as numeric)
+    
+    
+ as attribution_send_ts,
+        
+
+    
+    cast(attribution.message as string)
+    
+    
+ as attribution_message,
+        
+
+    
+    cast(attribution.flow as string)
+    
+    
+ as attribution_flow,
+        
+
+    
+    cast(attribution.variation as string)
+    
+    
+ as attribution_variation,
+        
+
+    
+    cast(attribution.group_ids as string)
+    
+    
+ as attribution_group_ids,
+        
+
+    
+    cast(attribution.experiment as string)
+    
+    
+ as attribution_experiment,
+        
+
+    
+    cast(attribution.attributed_channel as string)
+    
+    
+ as attribution_attributed_channel,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as datetime,
+        
+
+    
+    cast(attributes.uuid as string)
+    
+    
+ as attributes_uuid,
+        
+
+    
+    cast(links.self as string)
+    
+    
+ as links_self,
+        
+
+    
+        _daton_user_id
+    
+
+ as _daton_user_id,
+        
+
+    
+        _daton_batch_runtime
+    
+
+ as _daton_batch_runtime,
+        
+    
+    
+        _daton_batch_id
+    
+
+ as _daton_batch_id,
+        current_timestamp() as _last_updated,
+        'manual' as _run_id
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_bounced_email a
+        
+
+    
+    left join unnest(attributes) as attributes
+    
+    
+
+        
+
+    
+    left join unnest(attributes.event_properties) event_properties
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.extra) extra
+    
+    
+
+        
+
+    
+    left join unnest(extra.bounce_delivery_info) bounce_delivery_info
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.attribution) attribution
+    
+    
+
+        
+
+    
+    left join unnest(links) as links
+    
+    
+
+        
+        
+            where 
+
+    
+        _daton_batch_runtime
+    
+
+  >= (select coalesce(max(_daton_batch_runtime) - 2592000000,0) from `edm-saras`.`edm`.`KlaviyoBouncedEmail`)
+        
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+        ) as DBT_INTERNAL_SOURCE
+        on (
+                    DBT_INTERNAL_SOURCE.id = DBT_INTERNAL_DEST.id
+                )
+
+    
+    when matched then update set
+        `brand` = DBT_INTERNAL_SOURCE.`brand`,`store` = DBT_INTERNAL_SOURCE.`store`,`type` = DBT_INTERNAL_SOURCE.`type`,`id` = DBT_INTERNAL_SOURCE.`id`,`attributes_metric_id` = DBT_INTERNAL_SOURCE.`attributes_metric_id`,`attributes_profile_id` = DBT_INTERNAL_SOURCE.`attributes_profile_id`,`attributes_timestamp` = DBT_INTERNAL_SOURCE.`attributes_timestamp`,`event_properties_Subject` = DBT_INTERNAL_SOURCE.`event_properties_Subject`,`event_properties_Campaign_Name` = DBT_INTERNAL_SOURCE.`event_properties_Campaign_Name`,`event_properties_flow` = DBT_INTERNAL_SOURCE.`event_properties_flow`,`event_properties_message` = DBT_INTERNAL_SOURCE.`event_properties_message`,`event_properties_Email_Domain` = DBT_INTERNAL_SOURCE.`event_properties_Email_Domain`,`event_properties_cohort_message_send_cohort` = DBT_INTERNAL_SOURCE.`event_properties_cohort_message_send_cohort`,`event_properties_bounce_type` = DBT_INTERNAL_SOURCE.`event_properties_bounce_type`,`event_properties_ESP` = DBT_INTERNAL_SOURCE.`event_properties_ESP`,`event_properties_group_ids` = DBT_INTERNAL_SOURCE.`event_properties_group_ids`,`event_properties_event_id` = DBT_INTERNAL_SOURCE.`event_properties_event_id`,`event_properties_variation` = DBT_INTERNAL_SOURCE.`event_properties_variation`,`event_properties_cohort_variation_send_cohort` = DBT_INTERNAL_SOURCE.`event_properties_cohort_variation_send_cohort`,`event_properties_experiment` = DBT_INTERNAL_SOURCE.`event_properties_experiment`,`event_properties_klaviyo_bounce_category` = DBT_INTERNAL_SOURCE.`event_properties_klaviyo_bounce_category`,`event_properties_Inbox_Provider` = DBT_INTERNAL_SOURCE.`event_properties_Inbox_Provider`,`bounce_delivery_info_add_exclusion` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_add_exclusion`,`bounce_delivery_info_is_autoresponder` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_is_autoresponder`,`bounce_delivery_info_reason` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_reason`,`bounce_delivery_info_type` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_type`,`bounce_delivery_info_action_id` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_action_id`,`bounce_delivery_info_ip` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_ip`,`bounce_delivery_info_code` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_code`,`bounce_delivery_info_rigidity` = DBT_INTERNAL_SOURCE.`bounce_delivery_info_rigidity`,`attribution_attributed_event_id` = DBT_INTERNAL_SOURCE.`attribution_attributed_event_id`,`attribution_send_ts` = DBT_INTERNAL_SOURCE.`attribution_send_ts`,`attribution_message` = DBT_INTERNAL_SOURCE.`attribution_message`,`attribution_flow` = DBT_INTERNAL_SOURCE.`attribution_flow`,`attribution_variation` = DBT_INTERNAL_SOURCE.`attribution_variation`,`attribution_group_ids` = DBT_INTERNAL_SOURCE.`attribution_group_ids`,`attribution_experiment` = DBT_INTERNAL_SOURCE.`attribution_experiment`,`attribution_attributed_channel` = DBT_INTERNAL_SOURCE.`attribution_attributed_channel`,`datetime` = DBT_INTERNAL_SOURCE.`datetime`,`attributes_uuid` = DBT_INTERNAL_SOURCE.`attributes_uuid`,`links_self` = DBT_INTERNAL_SOURCE.`links_self`,`_daton_user_id` = DBT_INTERNAL_SOURCE.`_daton_user_id`,`_daton_batch_runtime` = DBT_INTERNAL_SOURCE.`_daton_batch_runtime`,`_daton_batch_id` = DBT_INTERNAL_SOURCE.`_daton_batch_id`,`_last_updated` = DBT_INTERNAL_SOURCE.`_last_updated`,`_run_id` = DBT_INTERNAL_SOURCE.`_run_id`
+    
+
+    when not matched then insert
+        (`brand`, `store`, `type`, `id`, `attributes_metric_id`, `attributes_profile_id`, `attributes_timestamp`, `event_properties_Subject`, `event_properties_Campaign_Name`, `event_properties_flow`, `event_properties_message`, `event_properties_Email_Domain`, `event_properties_cohort_message_send_cohort`, `event_properties_bounce_type`, `event_properties_ESP`, `event_properties_group_ids`, `event_properties_event_id`, `event_properties_variation`, `event_properties_cohort_variation_send_cohort`, `event_properties_experiment`, `event_properties_klaviyo_bounce_category`, `event_properties_Inbox_Provider`, `bounce_delivery_info_add_exclusion`, `bounce_delivery_info_is_autoresponder`, `bounce_delivery_info_reason`, `bounce_delivery_info_type`, `bounce_delivery_info_action_id`, `bounce_delivery_info_ip`, `bounce_delivery_info_code`, `bounce_delivery_info_rigidity`, `attribution_attributed_event_id`, `attribution_send_ts`, `attribution_message`, `attribution_flow`, `attribution_variation`, `attribution_group_ids`, `attribution_experiment`, `attribution_attributed_channel`, `datetime`, `attributes_uuid`, `links_self`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `_last_updated`, `_run_id`)
+    values
+        (`brand`, `store`, `type`, `id`, `attributes_metric_id`, `attributes_profile_id`, `attributes_timestamp`, `event_properties_Subject`, `event_properties_Campaign_Name`, `event_properties_flow`, `event_properties_message`, `event_properties_Email_Domain`, `event_properties_cohort_message_send_cohort`, `event_properties_bounce_type`, `event_properties_ESP`, `event_properties_group_ids`, `event_properties_event_id`, `event_properties_variation`, `event_properties_cohort_variation_send_cohort`, `event_properties_experiment`, `event_properties_klaviyo_bounce_category`, `event_properties_Inbox_Provider`, `bounce_delivery_info_add_exclusion`, `bounce_delivery_info_is_autoresponder`, `bounce_delivery_info_reason`, `bounce_delivery_info_type`, `bounce_delivery_info_action_id`, `bounce_delivery_info_ip`, `bounce_delivery_info_code`, `bounce_delivery_info_rigidity`, `attribution_attributed_event_id`, `attribution_send_ts`, `attribution_message`, `attribution_flow`, `attribution_variation`, `attribution_group_ids`, `attribution_experiment`, `attribution_attributed_channel`, `datetime`, `attributes_uuid`, `links_self`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `_last_updated`, `_run_id`)
+
+
+    
+[0m12:08:13.095798 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:f0bebfb7-7819-45b0-8411-d6ca85613565&page=queryresults
+[0m12:08:18.947432 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (execute): 12:08:11.048771 => 12:08:18.947432
+[0m12:08:18.947432 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de157cfe-3c26-463b-a574-9f6ec5b2137c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6B3070>]}
+[0m12:08:18.947432 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoBouncedEmail ................ [[32mMERGE (2.4k rows, 336.9 MiB processed)[0m in 11.91s]
+[0m12:08:18.947432 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:18.947432 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:08:18.947432 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m12:08:18.947432 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m12:08:18.947432 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m12:08:18.947432 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoBouncedEmail' was properly closed.
+[0m12:08:18.947432 [info ] [MainThread]: 
+[0m12:08:18.947432 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 15.01 seconds (15.01s).
+[0m12:08:18.958511 [debug] [MainThread]: Command end result
+[0m12:08:18.965675 [info ] [MainThread]: 
+[0m12:08:18.981085 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:08:18.983500 [info ] [MainThread]: 
+[0m12:08:18.984502 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:08:18.987308 [debug] [MainThread]: Command `dbt run` succeeded at 12:08:18.986681 after 16.76 seconds
+[0m12:08:18.987308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9B656A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021BAF3EB3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B9E6FF790>]}
+[0m12:08:18.987308 [debug] [MainThread]: Flushing usage events
+[0m12:08:51.082462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923AF6B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923E023010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923E020490>]}
+
+
+============================== 12:08:51.082462 | 326c7e80-abea-46e0-9c42-235ff939d746 ==============================
+[0m12:08:51.082462 [info ] [MainThread]: Running with dbt=1.7.0
+[0m12:08:51.082462 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'debug': 'False', 'profiles_dir': 'Profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh --select KlaviyoBouncedEmail --profiles-dir Profiles', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:08:52.100587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923E06B670>]}
+[0m12:08:52.195557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924E8EB970>]}
+[0m12:08:52.195557 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m12:08:52.220985 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m12:08:52.430912 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:08:52.430912 [debug] [MainThread]: Partial parsing: updated file: klaviyo://models\Klaviyo\KlaviyoBouncedEmail.sql
+[0m12:08:52.632004 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m12:08:52.632004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924F503FA0>]}
+[0m12:08:52.656300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924F22F1C0>]}
+[0m12:08:52.656300 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m12:08:52.656300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924F22F0D0>]}
+[0m12:08:52.669803 [info ] [MainThread]: 
+[0m12:08:52.672785 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:08:52.675517 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m12:08:52.675517 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:55.980836 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m12:08:55.980836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:55.980836 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m12:08:55.980836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:08:57.224968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923E022230>]}
+[0m12:08:57.224968 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m12:08:57.224968 [info ] [MainThread]: 
+[0m12:08:57.224968 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:57.224968 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoBouncedEmail ..................... [RUN]
+[0m12:08:57.240554 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoBouncedEmail'
+[0m12:08:57.241034 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoBouncedEmail
+[0m12:08:57.255441 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:08:57.300964 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%bounced_email'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m12:08:58.902559 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:52f41076-3c61-49a8-a482-18f8761b4d4f&page=queryresults
+[0m12:09:01.519233 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:09:01.519233 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (compile): 12:08:57.242038 => 12:09:01.519233
+[0m12:09:01.519233 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoBouncedEmail
+[0m12:09:02.268981 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoBouncedEmail"
+[0m12:09:02.284605 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoBouncedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoBouncedEmail"} */
+
+  
+    
+
+    create or replace table `edm-saras`.`edm`.`KlaviyoBouncedEmail`
+      
+    partition by timestamp_trunc(datetime, day)
+    
+
+    OPTIONS()
+    as (
+      
+
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        a.type,
+        id,
+        
+
+    
+    cast(attributes.metric_id as string)
+    
+    
+ as attributes_metric_id,
+        
+
+    
+    cast(attributes.profile_id as string)
+    
+    
+ as attributes_profile_id,
+        timestamp_seconds(
+
+    
+    cast(attributes.timestamp as BIGINT)
+    
+    
+) as attributes_timestamp,
+        
+
+    
+    cast(event_properties.Subject as string)
+    
+    
+ as event_properties_Subject,
+        
+
+    
+    cast(event_properties.Campaign_Name as string)
+    
+    
+ as event_properties_Campaign_Name,
+        
+
+    
+    cast(event_properties.flow as string)
+    
+    
+ as event_properties_flow,
+        
+
+    
+    cast(event_properties.message as string)
+    
+    
+ as event_properties_message,
+        
+
+    
+    cast(event_properties.Email_Domain as string)
+    
+    
+ as event_properties_Email_Domain,
+        
+
+    
+    cast(event_properties.cohort_message_send_cohort as string)
+    
+    
+ as event_properties_cohort_message_send_cohort,
+        
+
+    
+    cast(event_properties.Bounce_Type as string)
+    
+    
+ as event_properties_bounce_type,
+        
+
+    
+    cast(event_properties.ESP as numeric)
+    
+    
+ as event_properties_ESP,
+        
+
+    
+    cast(event_properties.group_ids as string)
+    
+    
+ as event_properties_group_ids,
+        
+
+    
+    cast(event_properties.event_id as string)
+    
+    
+ as event_properties_event_id,
+        
+
+    
+    cast(event_properties.variation as string)
+    
+    
+ as event_properties_variation,
+        
+
+    
+    cast(event_properties.cohort_variation_send_cohort as string)
+    
+    
+ as event_properties_cohort_variation_send_cohort,
+        
+
+    
+    cast(event_properties.experiment as string)
+    
+    
+ as event_properties_experiment,
+        
+
+    
+    cast(event_properties.klaviyo_bounce_category as string)
+    
+    
+ as event_properties_klaviyo_bounce_category,
+        
+
+    
+    cast(event_properties.`Inbox Provider` as string)
+    
+    
+ as event_properties_Inbox_Provider,
+        
+
+    
+    cast(bounce_delivery_info.add_exclusion as boolean)
+    
+    
+ as bounce_delivery_info_add_exclusion,
+        
+
+    
+    cast(bounce_delivery_info.is_autoresponder as boolean)
+    
+    
+ as bounce_delivery_info_is_autoresponder,
+        
+
+    
+    cast(bounce_delivery_info.reason as string)
+    
+    
+ as bounce_delivery_info_reason,
+        
+
+    
+    cast(bounce_delivery_info.type as string)
+    
+    
+ as bounce_delivery_info_type,
+        
+
+    
+    cast(bounce_delivery_info.action_id as string)
+    
+    
+ as bounce_delivery_info_action_id,
+        
+
+    
+    cast(bounce_delivery_info.ip as string)
+    
+    
+ as bounce_delivery_info_ip,
+        
+
+    
+    cast(bounce_delivery_info.code as string)
+    
+    
+ as bounce_delivery_info_code,
+        
+
+    
+    cast(bounce_delivery_info.rigidity as string)
+    
+    
+ as bounce_delivery_info_rigidity,
+        
+
+    
+    cast(attribution.attributed_event_id as string)
+    
+    
+ as attribution_attributed_event_id,
+        
+
+    
+    cast(attribution.send_ts as numeric)
+    
+    
+ as attribution_send_ts,
+        
+
+    
+    cast(attribution.message as string)
+    
+    
+ as attribution_message,
+        
+
+    
+    cast(attribution.flow as string)
+    
+    
+ as attribution_flow,
+        
+
+    
+    cast(attribution.variation as string)
+    
+    
+ as attribution_variation,
+        
+
+    
+    cast(attribution.group_ids as string)
+    
+    
+ as attribution_group_ids,
+        
+
+    
+    cast(attribution.experiment as string)
+    
+    
+ as attribution_experiment,
+        
+
+    
+    cast(attribution.attributed_channel as string)
+    
+    
+ as attribution_attributed_channel,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as datetime,
+        
+
+    
+    cast(attributes.uuid as string)
+    
+    
+ as attributes_uuid,
+        
+
+    
+    cast(links.self as string)
+    
+    
+ as links_self,
+        
+
+    
+        _daton_user_id
+    
+
+ as _daton_user_id,
+        
+
+    
+        _daton_batch_runtime
+    
+
+ as _daton_batch_runtime,
+        
+    
+    
+        _daton_batch_id
+    
+
+ as _daton_batch_id,
+        current_timestamp() as _last_updated,
+        'manual' as _run_id
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_bounced_email a
+        
+
+    
+    left join unnest(attributes) as attributes
+    
+    
+
+        
+
+    
+    left join unnest(attributes.event_properties) event_properties
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.extra) extra
+    
+    
+
+        
+
+    
+    left join unnest(extra.bounce_delivery_info) bounce_delivery_info
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.attribution) attribution
+    
+    
+
+        
+
+    
+    left join unnest(links) as links
+    
+    
+
+        
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+    );
+  
+[0m12:09:03.196366 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:9159f9d3-0f17-4fb3-ae17-3122e442e18b&page=queryresults
+[0m12:09:20.837857 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoBouncedEmail (execute): 12:09:01.519233 => 12:09:20.822269
+[0m12:09:20.838650 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '326c7e80-abea-46e0-9c42-235ff939d746', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924EF34D60>]}
+[0m12:09:20.838650 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoBouncedEmail ................ [[32mCREATE TABLE (228.4k rows, 168.5 MiB processed)[0m in 23.61s]
+[0m12:09:20.838650 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoBouncedEmail
+[0m12:09:20.838650 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:09:20.838650 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m12:09:20.838650 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m12:09:20.838650 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m12:09:20.838650 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoBouncedEmail' was properly closed.
+[0m12:09:20.838650 [info ] [MainThread]: 
+[0m12:09:20.838650 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 28.17 seconds (28.17s).
+[0m12:09:20.847397 [debug] [MainThread]: Command end result
+[0m12:09:20.866443 [info ] [MainThread]: 
+[0m12:09:20.868436 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:09:20.868647 [info ] [MainThread]: 
+[0m12:09:20.869686 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:09:20.869686 [debug] [MainThread]: Command `dbt run` succeeded at 12:09:20.869686 after 29.84 seconds
+[0m12:09:20.869686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002923AF6B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924EF370D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002924EDEA110>]}
+[0m12:09:20.869686 [debug] [MainThread]: Flushing usage events
+[0m21:50:33.322708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5AB7A710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC34F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC35450>]}
+
+
+============================== 21:50:33.337809 | 0b4a8537-5227-4070-b0e9-10befadd3026 ==============================
+[0m21:50:33.337809 [info ] [MainThread]: Running with dbt=1.7.0
+[0m21:50:33.337809 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'Profiles', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --full-refresh --select KlaviyoCampaigns --profiles-dir Profiles', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:50:37.617457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC74C70>]}
+[0m21:50:37.813259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC77DF0>]}
+[0m21:50:37.817765 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m21:50:37.870420 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m21:50:38.699870 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:50:38.714457 [debug] [MainThread]: Partial parsing: updated file: klaviyo://models\Klaviyo\KlaviyoCampaigns.sql
+[0m21:50:39.103684 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m21:50:39.103684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E6F09CAF0>]}
+[0m21:50:39.137970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E6EE43130>]}
+[0m21:50:39.151746 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m21:50:39.151746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E6EE43040>]}
+[0m21:50:39.151746 [info ] [MainThread]: 
+[0m21:50:39.158750 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:50:39.159435 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m21:50:39.159435 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:50:42.043729 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m21:50:42.058939 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:50:42.043729 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m21:50:42.061731 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:50:43.661546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC74DC0>]}
+[0m21:50:43.661546 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m21:50:43.661546 [info ] [MainThread]: 
+[0m21:50:43.677775 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoCampaigns
+[0m21:50:43.677775 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoCampaigns ........................ [RUN]
+[0m21:50:43.692748 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoCampaigns'
+[0m21:50:43.692748 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoCampaigns
+[0m21:50:43.724548 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:50:43.824913 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoCampaigns: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoCampaigns"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%campaigns'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m21:50:45.829322 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:5d528a8f-7b9c-4db9-b1e7-e15f81695739&page=queryresults
+[0m21:50:48.098463 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoCampaigns"
+[0m21:50:48.098463 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoCampaigns (compile): 21:50:43.692748 => 21:50:48.098463
+[0m21:50:48.098463 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoCampaigns
+[0m21:50:48.982880 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoCampaigns"
+[0m21:50:48.982880 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoCampaigns: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoCampaigns"} */
+
+  
+    
+
+    create or replace table `edm-saras`.`edm`.`KlaviyoCampaigns`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        '' as Country,
+        a.object,	
+        a.id as id,
+        a.name,	   	   	
+        a.subject,	   	   	
+        a.from_email,	   	   	
+        a.from_name,
+        
+
+    
+    cast(lists.object as string)
+    
+    
+ as lists_object,
+        
+
+    
+    cast(lists.id as string)
+    
+    
+ as lists_id,
+        
+
+    
+    cast(lists.name as string)
+    
+    
+ as lists_name,
+        
+
+    
+    cast(lists.list_type as string)
+    
+    
+ as lists_list_type,
+        
+
+    
+    cast(lists.folder as string)
+    
+    
+ as lists_forlder,
+        cast(case when regexp_contains(lists.created, r'.*T.{5}$') then lists.created||':00' else lists.created end as timestamp) as lists_created,
+        cast(case when regexp_contains(lists.updated, r'.*T.{5}$') then lists.updated||':00' else lists.updated end as timestamp) as lists_updated,
+        
+
+    
+    cast(lists.person_count as int64)
+    
+    
+ as lists_person_count,
+        
+
+    
+    cast(lists.person_count_nu as numeric)
+    
+    
+ as lists_person_count_nu,
+        
+
+    
+    cast(excluded_lists.object as string)
+    
+    
+ as excluded_lists_object,
+        
+
+    
+    cast(excluded_lists.id as string)
+    
+    
+ as excluded_lists_id,
+        
+
+    
+    cast(excluded_lists.name as string)
+    
+    
+ as excluded_lists_name,
+        
+
+    
+    cast(excluded_lists.list_type as string)
+    
+    
+ as excluded_lists_list_type,
+        
+
+    
+    cast(excluded_lists.folder as string)
+    
+    
+ as excluded_lists_forlder,
+        cast(case when regexp_contains(excluded_lists.created, r'.*T.{5}$') then excluded_lists.created||':00' else excluded_lists.created end as timestamp) as excluded_lists_created,
+        cast(case when regexp_contains(excluded_lists.updated, r'.*T.{5}$') then excluded_lists.updated||':00' else excluded_lists.updated end as timestamp) as excluded_lists_updated,
+        
+
+    
+    cast(excluded_lists.person_count as int64)
+    
+    
+ as excluded_lists_person_count,
+        
+
+    
+    cast(excluded_lists.person_count_nu as numeric)
+    
+    
+ as excluded_lists_person_count_nu,	   	   	
+        a.status,	   	   	
+        cast(a.status_id as string) as status_id,	   	   	
+        a.status_label,	   	   	
+        a.sent_at,	   	   	
+        cast(case when regexp_contains(a.send_time, r'.*T.{5}$') then a.send_time||':00' else a.send_time end as timestamp) as send_time,
+        cast(case when regexp_contains(a.created, r'.*T.{5}$') then a.created||':00' else a.created end as timestamp) as created,
+        cast(case when regexp_contains(a.updated, r'.*T.{5}$') then a.updated||':00' else a.updated end as timestamp) as updated, 	   	   	
+        a.num_recipients,	   	   	
+        a.campaign_type,	   	   	
+        a.is_segmented,	   	   	
+        a.message_type,	   	   	
+        a.template_id,	   	   	
+        _daton_user_id,	   	   	
+        _daton_batch_runtime,	   	   	
+        _daton_batch_id,  	   	
+        status_id_nu,	   	   	
+        num_recipients_nu,
+        unix_micros(current_timestamp()) as _edm_runtime
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_campaigns a
+        
+
+    
+    left join unnest(lists) as lists
+    
+    
+
+        
+
+    
+    left join unnest(excluded_lists) as excluded_lists
+    
+    
+
+        
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+    );
+  
+[0m21:50:50.340539 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:a8462a40-c89a-4204-9bcd-89bfe79f6ce3&page=queryresults
+[0m21:51:00.209542 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoCampaigns (execute): 21:50:48.098463 => 21:51:00.209542
+[0m21:51:00.209542 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0b4a8537-5227-4070-b0e9-10befadd3026', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E6F1E3550>]}
+[0m21:51:00.223901 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoCampaigns ................... [[32mCREATE TABLE (3.4k rows, 11.2 GiB processed)[0m in 16.53s]
+[0m21:51:00.225304 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoCampaigns
+[0m21:51:00.225304 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:00.225304 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m21:51:00.225304 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m21:51:00.225304 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m21:51:00.225304 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoCampaigns' was properly closed.
+[0m21:51:00.241929 [info ] [MainThread]: 
+[0m21:51:00.241929 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 21.09 seconds (21.09s).
+[0m21:51:00.246770 [debug] [MainThread]: Command end result
+[0m21:51:00.285788 [info ] [MainThread]: 
+[0m21:51:00.295802 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:51:00.300426 [info ] [MainThread]: 
+[0m21:51:00.302489 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:51:00.302489 [debug] [MainThread]: Command `dbt run` succeeded at 21:51:00.302489 after 27.05 seconds
+[0m21:51:00.302489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5AB7A710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E5DC77DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E6F188640>]}
+[0m21:51:00.311497 [debug] [MainThread]: Flushing usage events
+[0m21:51:19.275821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3B1A6A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3E202FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3E201240>]}
+
+
+============================== 21:51:19.290645 | 84e3444e-38be-46e4-9122-f9383fe46d12 ==============================
+[0m21:51:19.290645 [info ] [MainThread]: Running with dbt=1.7.0
+[0m21:51:19.290645 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'debug': 'False', 'profiles_dir': 'Profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select KlaviyoCampaigns --profiles-dir Profiles', 'send_anonymous_usage_stats': 'True'}
+[0m21:51:20.972878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3E24B790>]}
+[0m21:51:21.135939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3E1C77F0>]}
+[0m21:51:21.135939 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m21:51:21.190830 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m21:51:21.477811 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:21.477811 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:21.493768 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m21:51:21.511314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F4500D0>]}
+[0m21:51:21.555132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F413220>]}
+[0m21:51:21.555132 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m21:51:21.555132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F413130>]}
+[0m21:51:21.555132 [info ] [MainThread]: 
+[0m21:51:21.555132 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:51:21.566338 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m21:51:21.566338 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:23.024705 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m21:51:23.024705 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m21:51:23.024705 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:23.040905 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:24.810529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F411F60>]}
+[0m21:51:24.810529 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m21:51:24.810529 [info ] [MainThread]: 
+[0m21:51:24.810529 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoCampaigns
+[0m21:51:24.827973 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoCampaigns ........................ [RUN]
+[0m21:51:24.827973 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoCampaigns'
+[0m21:51:24.827973 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoCampaigns
+[0m21:51:24.881730 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:51:24.935307 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoCampaigns: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoCampaigns"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%campaigns'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m21:51:27.920628 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:d4b4e474-eb51-4d90-b2a9-7d7d39869725&page=queryresults
+[0m21:51:29.820564 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoCampaigns"
+[0m21:51:29.820564 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoCampaigns (compile): 21:51:24.833989 => 21:51:29.820564
+[0m21:51:29.820564 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoCampaigns
+[0m21:51:30.949159 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoCampaigns"
+[0m21:51:30.949159 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoCampaigns: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoCampaigns"} */
+-- back compat for old kwarg name
+  
+  
+        
+            
+                
+                
+            
+        
+    
+
+    
+
+    merge into `edm-saras`.`edm`.`KlaviyoCampaigns` as DBT_INTERNAL_DEST
+        using (
+
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        '' as Country,
+        a.object,	
+        a.id as id,
+        a.name,	   	   	
+        a.subject,	   	   	
+        a.from_email,	   	   	
+        a.from_name,
+        
+
+    
+    cast(lists.object as string)
+    
+    
+ as lists_object,
+        
+
+    
+    cast(lists.id as string)
+    
+    
+ as lists_id,
+        
+
+    
+    cast(lists.name as string)
+    
+    
+ as lists_name,
+        
+
+    
+    cast(lists.list_type as string)
+    
+    
+ as lists_list_type,
+        
+
+    
+    cast(lists.folder as string)
+    
+    
+ as lists_forlder,
+        cast(case when regexp_contains(lists.created, r'.*T.{5}$') then lists.created||':00' else lists.created end as timestamp) as lists_created,
+        cast(case when regexp_contains(lists.updated, r'.*T.{5}$') then lists.updated||':00' else lists.updated end as timestamp) as lists_updated,
+        
+
+    
+    cast(lists.person_count as int64)
+    
+    
+ as lists_person_count,
+        
+
+    
+    cast(lists.person_count_nu as numeric)
+    
+    
+ as lists_person_count_nu,
+        
+
+    
+    cast(excluded_lists.object as string)
+    
+    
+ as excluded_lists_object,
+        
+
+    
+    cast(excluded_lists.id as string)
+    
+    
+ as excluded_lists_id,
+        
+
+    
+    cast(excluded_lists.name as string)
+    
+    
+ as excluded_lists_name,
+        
+
+    
+    cast(excluded_lists.list_type as string)
+    
+    
+ as excluded_lists_list_type,
+        
+
+    
+    cast(excluded_lists.folder as string)
+    
+    
+ as excluded_lists_forlder,
+        cast(case when regexp_contains(excluded_lists.created, r'.*T.{5}$') then excluded_lists.created||':00' else excluded_lists.created end as timestamp) as excluded_lists_created,
+        cast(case when regexp_contains(excluded_lists.updated, r'.*T.{5}$') then excluded_lists.updated||':00' else excluded_lists.updated end as timestamp) as excluded_lists_updated,
+        
+
+    
+    cast(excluded_lists.person_count as int64)
+    
+    
+ as excluded_lists_person_count,
+        
+
+    
+    cast(excluded_lists.person_count_nu as numeric)
+    
+    
+ as excluded_lists_person_count_nu,	   	   	
+        a.status,	   	   	
+        cast(a.status_id as string) as status_id,	   	   	
+        a.status_label,	   	   	
+        a.sent_at,	   	   	
+        cast(case when regexp_contains(a.send_time, r'.*T.{5}$') then a.send_time||':00' else a.send_time end as timestamp) as send_time,
+        cast(case when regexp_contains(a.created, r'.*T.{5}$') then a.created||':00' else a.created end as timestamp) as created,
+        cast(case when regexp_contains(a.updated, r'.*T.{5}$') then a.updated||':00' else a.updated end as timestamp) as updated, 	   	   	
+        a.num_recipients,	   	   	
+        a.campaign_type,	   	   	
+        a.is_segmented,	   	   	
+        a.message_type,	   	   	
+        a.template_id,	   	   	
+        _daton_user_id,	   	   	
+        _daton_batch_runtime,	   	   	
+        _daton_batch_id,  	   	
+        status_id_nu,	   	   	
+        num_recipients_nu,
+        unix_micros(current_timestamp()) as _edm_runtime
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_campaigns a
+        
+
+    
+    left join unnest(lists) as lists
+    
+    
+
+        
+
+    
+    left join unnest(excluded_lists) as excluded_lists
+    
+    
+
+        
+            
+            where _daton_batch_runtime  >= (select coalesce(max(_daton_batch_runtime) - 2592000000,0) from `edm-saras`.`edm`.`KlaviyoCampaigns`)
+            
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+        ) as DBT_INTERNAL_SOURCE
+        on (
+                    DBT_INTERNAL_SOURCE.id = DBT_INTERNAL_DEST.id
+                )
+
+    
+    when matched then update set
+        `brand` = DBT_INTERNAL_SOURCE.`brand`,`store` = DBT_INTERNAL_SOURCE.`store`,`Country` = DBT_INTERNAL_SOURCE.`Country`,`object` = DBT_INTERNAL_SOURCE.`object`,`id` = DBT_INTERNAL_SOURCE.`id`,`name` = DBT_INTERNAL_SOURCE.`name`,`subject` = DBT_INTERNAL_SOURCE.`subject`,`from_email` = DBT_INTERNAL_SOURCE.`from_email`,`from_name` = DBT_INTERNAL_SOURCE.`from_name`,`lists_object` = DBT_INTERNAL_SOURCE.`lists_object`,`lists_id` = DBT_INTERNAL_SOURCE.`lists_id`,`lists_name` = DBT_INTERNAL_SOURCE.`lists_name`,`lists_list_type` = DBT_INTERNAL_SOURCE.`lists_list_type`,`lists_forlder` = DBT_INTERNAL_SOURCE.`lists_forlder`,`lists_created` = DBT_INTERNAL_SOURCE.`lists_created`,`lists_updated` = DBT_INTERNAL_SOURCE.`lists_updated`,`lists_person_count` = DBT_INTERNAL_SOURCE.`lists_person_count`,`lists_person_count_nu` = DBT_INTERNAL_SOURCE.`lists_person_count_nu`,`excluded_lists_object` = DBT_INTERNAL_SOURCE.`excluded_lists_object`,`excluded_lists_id` = DBT_INTERNAL_SOURCE.`excluded_lists_id`,`excluded_lists_name` = DBT_INTERNAL_SOURCE.`excluded_lists_name`,`excluded_lists_list_type` = DBT_INTERNAL_SOURCE.`excluded_lists_list_type`,`excluded_lists_forlder` = DBT_INTERNAL_SOURCE.`excluded_lists_forlder`,`excluded_lists_created` = DBT_INTERNAL_SOURCE.`excluded_lists_created`,`excluded_lists_updated` = DBT_INTERNAL_SOURCE.`excluded_lists_updated`,`excluded_lists_person_count` = DBT_INTERNAL_SOURCE.`excluded_lists_person_count`,`excluded_lists_person_count_nu` = DBT_INTERNAL_SOURCE.`excluded_lists_person_count_nu`,`status` = DBT_INTERNAL_SOURCE.`status`,`status_id` = DBT_INTERNAL_SOURCE.`status_id`,`status_label` = DBT_INTERNAL_SOURCE.`status_label`,`sent_at` = DBT_INTERNAL_SOURCE.`sent_at`,`send_time` = DBT_INTERNAL_SOURCE.`send_time`,`created` = DBT_INTERNAL_SOURCE.`created`,`updated` = DBT_INTERNAL_SOURCE.`updated`,`num_recipients` = DBT_INTERNAL_SOURCE.`num_recipients`,`campaign_type` = DBT_INTERNAL_SOURCE.`campaign_type`,`is_segmented` = DBT_INTERNAL_SOURCE.`is_segmented`,`message_type` = DBT_INTERNAL_SOURCE.`message_type`,`template_id` = DBT_INTERNAL_SOURCE.`template_id`,`_daton_user_id` = DBT_INTERNAL_SOURCE.`_daton_user_id`,`_daton_batch_runtime` = DBT_INTERNAL_SOURCE.`_daton_batch_runtime`,`_daton_batch_id` = DBT_INTERNAL_SOURCE.`_daton_batch_id`,`status_id_nu` = DBT_INTERNAL_SOURCE.`status_id_nu`,`num_recipients_nu` = DBT_INTERNAL_SOURCE.`num_recipients_nu`,`_edm_runtime` = DBT_INTERNAL_SOURCE.`_edm_runtime`
+    
+
+    when not matched then insert
+        (`brand`, `store`, `Country`, `object`, `id`, `name`, `subject`, `from_email`, `from_name`, `lists_object`, `lists_id`, `lists_name`, `lists_list_type`, `lists_forlder`, `lists_created`, `lists_updated`, `lists_person_count`, `lists_person_count_nu`, `excluded_lists_object`, `excluded_lists_id`, `excluded_lists_name`, `excluded_lists_list_type`, `excluded_lists_forlder`, `excluded_lists_created`, `excluded_lists_updated`, `excluded_lists_person_count`, `excluded_lists_person_count_nu`, `status`, `status_id`, `status_label`, `sent_at`, `send_time`, `created`, `updated`, `num_recipients`, `campaign_type`, `is_segmented`, `message_type`, `template_id`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `status_id_nu`, `num_recipients_nu`, `_edm_runtime`)
+    values
+        (`brand`, `store`, `Country`, `object`, `id`, `name`, `subject`, `from_email`, `from_name`, `lists_object`, `lists_id`, `lists_name`, `lists_list_type`, `lists_forlder`, `lists_created`, `lists_updated`, `lists_person_count`, `lists_person_count_nu`, `excluded_lists_object`, `excluded_lists_id`, `excluded_lists_name`, `excluded_lists_list_type`, `excluded_lists_forlder`, `excluded_lists_created`, `excluded_lists_updated`, `excluded_lists_person_count`, `excluded_lists_person_count_nu`, `status`, `status_id`, `status_label`, `sent_at`, `send_time`, `created`, `updated`, `num_recipients`, `campaign_type`, `is_segmented`, `message_type`, `template_id`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `status_id_nu`, `num_recipients_nu`, `_edm_runtime`)
+
+
+    
+[0m21:51:32.939361 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:f30320b1-d3fd-4cec-a70b-0a1726e5aba2&page=queryresults
+[0m21:51:39.084099 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoCampaigns (execute): 21:51:29.820564 => 21:51:39.084099
+[0m21:51:39.084099 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84e3444e-38be-46e4-9122-f9383fe46d12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F606140>]}
+[0m21:51:39.084099 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoCampaigns ................... [[32mMERGE (3.4k rows, 11.2 GiB processed)[0m in 14.26s]
+[0m21:51:39.084099 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoCampaigns
+[0m21:51:39.084099 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:39.099722 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m21:51:39.100496 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m21:51:39.101648 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m21:51:39.101648 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoCampaigns' was properly closed.
+[0m21:51:39.101648 [info ] [MainThread]: 
+[0m21:51:39.105197 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 17.55 seconds (17.55s).
+[0m21:51:39.110767 [debug] [MainThread]: Command end result
+[0m21:51:39.144520 [info ] [MainThread]: 
+[0m21:51:39.144520 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:51:39.144520 [info ] [MainThread]: 
+[0m21:51:39.151598 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:51:39.156069 [debug] [MainThread]: Command `dbt run` succeeded at 21:51:39.156069 after 19.94 seconds
+[0m21:51:39.156961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3B1A6A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B3E1C77F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4F603E50>]}
+[0m21:51:39.158350 [debug] [MainThread]: Flushing usage events
+[0m22:08:14.644024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1A6E7B700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1A9F33040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1A9F31FF0>]}
+
+
+============================== 22:08:14.657574 | fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea ==============================
+[0m22:08:14.657574 [info ] [MainThread]: Running with dbt=1.7.0
+[0m22:08:14.660770 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'profiles_dir': 'Profiles', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --full-refresh --select KlaviyoClickedEmail --profiles-dir Profiles', 'send_anonymous_usage_stats': 'True'}
+[0m22:08:18.155877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1A9F7B5B0>]}
+[0m22:08:18.324223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BAC1BB50>]}
+[0m22:08:18.324223 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m22:08:18.394459 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m22:08:18.888319 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:08:18.888319 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:08:18.888319 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m22:08:18.918483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BB1800D0>]}
+[0m22:08:18.995004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BB143130>]}
+[0m22:08:18.995004 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m22:08:18.995004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BB140670>]}
+[0m22:08:18.995004 [info ] [MainThread]: 
+[0m22:08:19.009863 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:08:19.013231 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m22:08:19.018746 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:08:21.584878 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m22:08:21.584878 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:08:21.584878 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m22:08:21.584878 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:08:23.260380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BB141E70>]}
+[0m22:08:23.260380 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m22:08:23.260380 [info ] [MainThread]: 
+[0m22:08:23.274733 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoClickedEmail
+[0m22:08:23.276236 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoClickedEmail ..................... [RUN]
+[0m22:08:23.278483 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoClickedEmail'
+[0m22:08:23.278483 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoClickedEmail
+[0m22:08:23.326022 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:08:23.394431 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoClickedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoClickedEmail"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%clicked_email'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m22:08:25.170015 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:48a4522e-06a7-4dba-bd05-bf3e0fdd3789&page=queryresults
+[0m22:08:27.177630 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoClickedEmail"
+[0m22:08:27.183040 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoClickedEmail (compile): 22:08:23.278483 => 22:08:27.183040
+[0m22:08:27.185471 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoClickedEmail
+[0m22:08:27.990864 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoClickedEmail"
+[0m22:08:28.006488 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoClickedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoClickedEmail"} */
+
+  
+    
+
+    create or replace table `edm-saras`.`edm`.`KlaviyoClickedEmail`
+      
+    partition by date
+    cluster by event_properties_Campaign_Name
+
+    OPTIONS()
+    as (
+      
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        type,
+        coalesce(id) as id,
+        
+
+    
+    cast(attributes.metric_id as string)
+    
+    
+ as attributes_metric_id,
+        
+
+    
+    cast(attributes.profile_id as string)
+    
+    
+ as attributes_profile_id,
+        timestamp_seconds(
+
+    
+    cast(attributes.timestamp as int64)
+    
+    
+) as attributes_timestamp,
+        
+
+    
+    cast(event_properties.Subject as string)
+    
+    
+ as event_properties_Subject,
+        
+
+    
+    cast(event_properties.Campaign_Name as string)
+    
+    
+ as event_properties_Campaign_Name,
+        
+
+    
+    cast(event_properties.flow as string)
+    
+    
+ as event_properties_flow,
+        
+
+    
+    cast(event_properties.message as string)
+    
+    
+ as event_properties_message,
+        
+
+    
+    cast(event_properties.Email_Domain as string)
+    
+    
+ as event_properties_Email_Domain,
+        
+
+    
+    cast(event_properties.cohort_message_send_cohort as string)
+    
+    
+ as event_properties_cohort_message_send_cohort,
+        
+
+    
+    cast(event_properties.message_interaction as string)
+    
+    
+ as event_properties_message_interaction,
+        
+
+    
+    cast(event_properties.URL as string)
+    
+    
+ as event_properties_URL,
+        
+
+    
+    cast(event_properties.Client_Type as string)
+    
+    
+ as event_properties_Client_Type,
+        
+
+    
+    cast(event_properties.Client_OS_Family as string)
+    
+    
+ as event_properties_Client_OS_Family,
+        
+
+    
+    cast(event_properties.Client_OS as string)
+    
+    
+ as event_properties_Client_OS,
+        
+
+    
+    cast(event_properties.Client_Name as string)
+    
+    
+ as event_properties_Client_Name,
+        
+
+    
+    cast(event_properties._ip as string)
+    
+    
+ as event_properties__ip,
+        
+
+    
+    cast(event_properties.ESP as numeric)
+    
+    
+ as event_properties_ESP,
+        
+
+    
+    cast(event_properties.group_ids as string)
+    
+    
+ as event_properties_group_ids,
+        
+
+    
+    cast(event_properties.event_id as string)
+    
+    
+ as event_properties_event_id,
+        
+
+    
+    cast(event_properties.variation as string)
+    
+    
+ as event_properties_variation,
+        
+
+    
+    cast(event_properties.cohort_variation_send_cohort as string)
+    
+    
+ as event_properties_cohort_variation_send_cohort,
+        
+
+    
+    cast(event_properties.experiment as string)
+    
+    
+ as event_properties_experiment,
+        
+
+    
+    cast(attribution.attributed_event_id as string)
+    
+    
+ as attribution_attributed_event_id,
+        
+
+    
+    cast(attribution.send_ts as numeric)
+    
+    
+ as attribution_send_ts,
+        
+
+    
+    cast(event_properties.`Inbox Provider` as string)
+    
+    
+ as event_properties_Inbox_Provider,
+        date(
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+) date,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as datetime,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as _edm_eff_strt_ts,
+        uuid,
+        
+
+    
+    cast(links.self as string)
+    
+    
+ as links_self,
+        _daton_user_id,
+        _daton_batch_runtime,
+        _daton_batch_id,
+        null as _edm_eff_end_ts,
+        unix_micros(current_timestamp()) as _edm_runtime
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_clicked_email a
+        
+
+    
+    left join unnest(attributes) as attributes
+    
+    
+
+        
+
+    
+    left join unnest(attributes.event_properties) event_properties
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.attribution) attribution
+    
+    
+
+        
+
+    
+    left join unnest(links) as links
+    
+    
+
+    
+    qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+    );
+  
+[0m22:08:28.860134 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:53152740-f392-4d0a-bc92-e36e021d0c02&page=queryresults
+[0m22:08:40.433547 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoClickedEmail (execute): 22:08:27.186958 => 22:08:40.433547
+[0m22:08:40.433547 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb76e638-ad2d-4e6e-9b9b-8a06bfdb2aea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BAC692D0>]}
+[0m22:08:40.449209 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoClickedEmail ................ [[32mCREATE TABLE (598.3k rows, 350.6 MiB processed)[0m in 17.16s]
+[0m22:08:40.449209 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoClickedEmail
+[0m22:08:40.449209 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:08:40.449209 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m22:08:40.449209 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m22:08:40.458505 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m22:08:40.458505 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoClickedEmail' was properly closed.
+[0m22:08:40.458505 [info ] [MainThread]: 
+[0m22:08:40.458505 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 21.46 seconds (21.46s).
+[0m22:08:40.464671 [debug] [MainThread]: Command end result
+[0m22:08:40.509905 [info ] [MainThread]: 
+[0m22:08:40.511585 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:08:40.511585 [info ] [MainThread]: 
+[0m22:08:40.522059 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:08:40.527328 [debug] [MainThread]: Command `dbt run` succeeded at 22:08:40.527328 after 26.03 seconds
+[0m22:08:40.527328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1A6E7B700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BAC1BB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1BB3022C0>]}
+[0m22:08:40.527328 [debug] [MainThread]: Flushing usage events
+[0m22:08:57.044310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B300CA6A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B303D32FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B303D31240>]}
+
+
+============================== 22:08:57.044310 | 524f4145-3446-4a76-8f81-2f792d569d8b ==============================
+[0m22:08:57.044310 [info ] [MainThread]: Running with dbt=1.7.0
+[0m22:08:57.044310 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\91809\\GitHub\\klaviyo\\logs', 'profiles_dir': 'Profiles', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select KlaviyoClickedEmail --profiles-dir Profiles', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:08:59.135256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B303D7F790>]}
+[0m22:08:59.293051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B303CFB7F0>]}
+[0m22:08:59.293051 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m22:08:59.351435 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m22:08:59.717669 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:08:59.717669 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:08:59.733495 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.Klaviyo.Klaviyo
+[0m22:08:59.751176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B314FB00D0>]}
+[0m22:08:59.795608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B314F6F220>]}
+[0m22:08:59.795608 [info ] [MainThread]: Found 25 models, 0 sources, 0 exposures, 0 metrics, 688 macros, 0 groups, 0 semantic models
+[0m22:08:59.809490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B314F6F130>]}
+[0m22:08:59.809490 [info ] [MainThread]: 
+[0m22:08:59.809490 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:08:59.816740 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras'
+[0m22:08:59.816740 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:01.535102 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm_stg_common'
+[0m22:09:01.549115 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:01.549115 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_edm-saras_edm'
+[0m22:09:01.550232 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:03.464686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B314F6DDE0>]}
+[0m22:09:03.464686 [info ] [MainThread]: Concurrency: 4 threads (target='bigquery')
+[0m22:09:03.464686 [info ] [MainThread]: 
+[0m22:09:03.482083 [debug] [Thread-1 (]: Began running node model.klaviyo.KlaviyoClickedEmail
+[0m22:09:03.482083 [info ] [Thread-1 (]: 1 of 1 START sql incremental model edm.KlaviyoClickedEmail ..................... [RUN]
+[0m22:09:03.488591 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.klaviyo.KlaviyoClickedEmail'
+[0m22:09:03.491934 [debug] [Thread-1 (]: Began compiling node model.klaviyo.KlaviyoClickedEmail
+[0m22:09:03.600725 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:09:03.656556 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoClickedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoClickedEmail"} */
+
+    
+    
+    
+    select concat(table_catalog,'.',table_schema, '.',table_name) as tables,
+    lower(concat(table_catalog,'.',table_schema, '.',table_name)) as tables_lowercase
+    from edm-saras.EDM_Daton.INFORMATION_SCHEMA.TABLES
+    where lower(table_name) like '%klaviyo%clicked_email'
+    
+ 
+
+    
+    
+        
+            and lower(table_name) not like ''
+    
+
+ 
+
+  
+[0m22:09:05.412170 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:31b088b1-5da9-4919-930a-3f1befbba147&page=queryresults
+[0m22:09:07.536367 [debug] [Thread-1 (]: Writing injected SQL for node "model.klaviyo.KlaviyoClickedEmail"
+[0m22:09:07.544339 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoClickedEmail (compile): 22:09:03.491934 => 22:09:07.536367
+[0m22:09:07.544339 [debug] [Thread-1 (]: Began executing node model.klaviyo.KlaviyoClickedEmail
+[0m22:09:08.278064 [debug] [Thread-1 (]: Writing runtime sql for node "model.klaviyo.KlaviyoClickedEmail"
+[0m22:09:08.278064 [debug] [Thread-1 (]: On model.klaviyo.KlaviyoClickedEmail: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "edm_data_transformation", "target_name": "bigquery", "node_id": "model.klaviyo.KlaviyoClickedEmail"} */
+-- back compat for old kwarg name
+  
+  
+        
+            
+                
+                
+            
+        
+    
+
+    
+
+    merge into `edm-saras`.`edm`.`KlaviyoClickedEmail` as DBT_INTERNAL_DEST
+        using (
+
+
+
+
+
+
+
+        select
+        'Brand'
+ as brand,
+        'US'
+ as store,
+        type,
+        coalesce(id) as id,
+        
+
+    
+    cast(attributes.metric_id as string)
+    
+    
+ as attributes_metric_id,
+        
+
+    
+    cast(attributes.profile_id as string)
+    
+    
+ as attributes_profile_id,
+        timestamp_seconds(
+
+    
+    cast(attributes.timestamp as int64)
+    
+    
+) as attributes_timestamp,
+        
+
+    
+    cast(event_properties.Subject as string)
+    
+    
+ as event_properties_Subject,
+        
+
+    
+    cast(event_properties.Campaign_Name as string)
+    
+    
+ as event_properties_Campaign_Name,
+        
+
+    
+    cast(event_properties.flow as string)
+    
+    
+ as event_properties_flow,
+        
+
+    
+    cast(event_properties.message as string)
+    
+    
+ as event_properties_message,
+        
+
+    
+    cast(event_properties.Email_Domain as string)
+    
+    
+ as event_properties_Email_Domain,
+        
+
+    
+    cast(event_properties.cohort_message_send_cohort as string)
+    
+    
+ as event_properties_cohort_message_send_cohort,
+        
+
+    
+    cast(event_properties.message_interaction as string)
+    
+    
+ as event_properties_message_interaction,
+        
+
+    
+    cast(event_properties.URL as string)
+    
+    
+ as event_properties_URL,
+        
+
+    
+    cast(event_properties.Client_Type as string)
+    
+    
+ as event_properties_Client_Type,
+        
+
+    
+    cast(event_properties.Client_OS_Family as string)
+    
+    
+ as event_properties_Client_OS_Family,
+        
+
+    
+    cast(event_properties.Client_OS as string)
+    
+    
+ as event_properties_Client_OS,
+        
+
+    
+    cast(event_properties.Client_Name as string)
+    
+    
+ as event_properties_Client_Name,
+        
+
+    
+    cast(event_properties._ip as string)
+    
+    
+ as event_properties__ip,
+        
+
+    
+    cast(event_properties.ESP as numeric)
+    
+    
+ as event_properties_ESP,
+        
+
+    
+    cast(event_properties.group_ids as string)
+    
+    
+ as event_properties_group_ids,
+        
+
+    
+    cast(event_properties.event_id as string)
+    
+    
+ as event_properties_event_id,
+        
+
+    
+    cast(event_properties.variation as string)
+    
+    
+ as event_properties_variation,
+        
+
+    
+    cast(event_properties.cohort_variation_send_cohort as string)
+    
+    
+ as event_properties_cohort_variation_send_cohort,
+        
+
+    
+    cast(event_properties.experiment as string)
+    
+    
+ as event_properties_experiment,
+        
+
+    
+    cast(attribution.attributed_event_id as string)
+    
+    
+ as attribution_attributed_event_id,
+        
+
+    
+    cast(attribution.send_ts as numeric)
+    
+    
+ as attribution_send_ts,
+        
+
+    
+    cast(event_properties.`Inbox Provider` as string)
+    
+    
+ as event_properties_Inbox_Provider,
+        date(
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+) date,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as datetime,
+        
+ 
+    
+        DATETIME(cast(replace(replace(left(attributes.datetime,19),"T"," "),"Z",":00") as timestamp))
+    
+ 
+ as _edm_eff_strt_ts,
+        uuid,
+        
+
+    
+    cast(links.self as string)
+    
+    
+ as links_self,
+        _daton_user_id,
+        _daton_batch_runtime,
+        _daton_batch_id,
+        null as _edm_eff_end_ts,
+        unix_micros(current_timestamp()) as _edm_runtime
+        from edm-saras.EDM_Daton.Brand_US_Klaviyo_BQ_clicked_email a
+        
+
+    
+    left join unnest(attributes) as attributes
+    
+    
+
+        
+
+    
+    left join unnest(attributes.event_properties) event_properties
+    
+    
+
+        
+
+    
+    left join unnest(event_properties.attribution) attribution
+    
+    
+
+        
+
+    
+    left join unnest(links) as links
+    
+    
+
+    
+            
+            where _daton_batch_runtime  >= (select coalesce(max(_daton_batch_runtime) - 2592000000,0) from `edm-saras`.`edm`.`KlaviyoClickedEmail`)
+            
+    qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+    
+
+        ) as DBT_INTERNAL_SOURCE
+        on (
+                    DBT_INTERNAL_SOURCE.id = DBT_INTERNAL_DEST.id
+                )
+
+    
+    when matched then update set
+        `brand` = DBT_INTERNAL_SOURCE.`brand`,`store` = DBT_INTERNAL_SOURCE.`store`,`type` = DBT_INTERNAL_SOURCE.`type`,`id` = DBT_INTERNAL_SOURCE.`id`,`attributes_metric_id` = DBT_INTERNAL_SOURCE.`attributes_metric_id`,`attributes_profile_id` = DBT_INTERNAL_SOURCE.`attributes_profile_id`,`attributes_timestamp` = DBT_INTERNAL_SOURCE.`attributes_timestamp`,`event_properties_Subject` = DBT_INTERNAL_SOURCE.`event_properties_Subject`,`event_properties_Campaign_Name` = DBT_INTERNAL_SOURCE.`event_properties_Campaign_Name`,`event_properties_flow` = DBT_INTERNAL_SOURCE.`event_properties_flow`,`event_properties_message` = DBT_INTERNAL_SOURCE.`event_properties_message`,`event_properties_Email_Domain` = DBT_INTERNAL_SOURCE.`event_properties_Email_Domain`,`event_properties_cohort_message_send_cohort` = DBT_INTERNAL_SOURCE.`event_properties_cohort_message_send_cohort`,`event_properties_message_interaction` = DBT_INTERNAL_SOURCE.`event_properties_message_interaction`,`event_properties_URL` = DBT_INTERNAL_SOURCE.`event_properties_URL`,`event_properties_Client_Type` = DBT_INTERNAL_SOURCE.`event_properties_Client_Type`,`event_properties_Client_OS_Family` = DBT_INTERNAL_SOURCE.`event_properties_Client_OS_Family`,`event_properties_Client_OS` = DBT_INTERNAL_SOURCE.`event_properties_Client_OS`,`event_properties_Client_Name` = DBT_INTERNAL_SOURCE.`event_properties_Client_Name`,`event_properties__ip` = DBT_INTERNAL_SOURCE.`event_properties__ip`,`event_properties_ESP` = DBT_INTERNAL_SOURCE.`event_properties_ESP`,`event_properties_group_ids` = DBT_INTERNAL_SOURCE.`event_properties_group_ids`,`event_properties_event_id` = DBT_INTERNAL_SOURCE.`event_properties_event_id`,`event_properties_variation` = DBT_INTERNAL_SOURCE.`event_properties_variation`,`event_properties_cohort_variation_send_cohort` = DBT_INTERNAL_SOURCE.`event_properties_cohort_variation_send_cohort`,`event_properties_experiment` = DBT_INTERNAL_SOURCE.`event_properties_experiment`,`attribution_attributed_event_id` = DBT_INTERNAL_SOURCE.`attribution_attributed_event_id`,`attribution_send_ts` = DBT_INTERNAL_SOURCE.`attribution_send_ts`,`event_properties_Inbox_Provider` = DBT_INTERNAL_SOURCE.`event_properties_Inbox_Provider`,`date` = DBT_INTERNAL_SOURCE.`date`,`datetime` = DBT_INTERNAL_SOURCE.`datetime`,`_edm_eff_strt_ts` = DBT_INTERNAL_SOURCE.`_edm_eff_strt_ts`,`uuid` = DBT_INTERNAL_SOURCE.`uuid`,`links_self` = DBT_INTERNAL_SOURCE.`links_self`,`_daton_user_id` = DBT_INTERNAL_SOURCE.`_daton_user_id`,`_daton_batch_runtime` = DBT_INTERNAL_SOURCE.`_daton_batch_runtime`,`_daton_batch_id` = DBT_INTERNAL_SOURCE.`_daton_batch_id`,`_edm_eff_end_ts` = DBT_INTERNAL_SOURCE.`_edm_eff_end_ts`,`_edm_runtime` = DBT_INTERNAL_SOURCE.`_edm_runtime`
+    
+
+    when not matched then insert
+        (`brand`, `store`, `type`, `id`, `attributes_metric_id`, `attributes_profile_id`, `attributes_timestamp`, `event_properties_Subject`, `event_properties_Campaign_Name`, `event_properties_flow`, `event_properties_message`, `event_properties_Email_Domain`, `event_properties_cohort_message_send_cohort`, `event_properties_message_interaction`, `event_properties_URL`, `event_properties_Client_Type`, `event_properties_Client_OS_Family`, `event_properties_Client_OS`, `event_properties_Client_Name`, `event_properties__ip`, `event_properties_ESP`, `event_properties_group_ids`, `event_properties_event_id`, `event_properties_variation`, `event_properties_cohort_variation_send_cohort`, `event_properties_experiment`, `attribution_attributed_event_id`, `attribution_send_ts`, `event_properties_Inbox_Provider`, `date`, `datetime`, `_edm_eff_strt_ts`, `uuid`, `links_self`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `_edm_eff_end_ts`, `_edm_runtime`)
+    values
+        (`brand`, `store`, `type`, `id`, `attributes_metric_id`, `attributes_profile_id`, `attributes_timestamp`, `event_properties_Subject`, `event_properties_Campaign_Name`, `event_properties_flow`, `event_properties_message`, `event_properties_Email_Domain`, `event_properties_cohort_message_send_cohort`, `event_properties_message_interaction`, `event_properties_URL`, `event_properties_Client_Type`, `event_properties_Client_OS_Family`, `event_properties_Client_OS`, `event_properties_Client_Name`, `event_properties__ip`, `event_properties_ESP`, `event_properties_group_ids`, `event_properties_event_id`, `event_properties_variation`, `event_properties_cohort_variation_send_cohort`, `event_properties_experiment`, `attribution_attributed_event_id`, `attribution_send_ts`, `event_properties_Inbox_Provider`, `date`, `datetime`, `_edm_eff_strt_ts`, `uuid`, `links_self`, `_daton_user_id`, `_daton_batch_runtime`, `_daton_batch_id`, `_edm_eff_end_ts`, `_edm_runtime`)
+
+
+    
+[0m22:09:09.413526 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=edm-saras&j=bq:US:1dfe5886-42cd-46ab-9eb2-e96f55b3dc3a&page=queryresults
+[0m22:09:18.062647 [debug] [Thread-1 (]: Timing info for model.klaviyo.KlaviyoClickedEmail (execute): 22:09:07.544339 => 22:09:18.062647
+[0m22:09:18.068058 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '524f4145-3446-4a76-8f81-2f792d569d8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B314F532E0>]}
+[0m22:09:18.070710 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model edm.KlaviyoClickedEmail ................ [[32mMERGE (16.4k rows, 376.7 MiB processed)[0m in 14.59s]
+[0m22:09:18.074857 [debug] [Thread-1 (]: Finished running node model.klaviyo.KlaviyoClickedEmail
+[0m22:09:18.079741 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:18.079741 [debug] [MainThread]: Connection 'list_edm-saras' was properly closed.
+[0m22:09:18.079741 [debug] [MainThread]: Connection 'list_edm-saras_edm_stg_common' was properly closed.
+[0m22:09:18.086734 [debug] [MainThread]: Connection 'list_edm-saras_edm' was properly closed.
+[0m22:09:18.086734 [debug] [MainThread]: Connection 'model.klaviyo.KlaviyoClickedEmail' was properly closed.
+[0m22:09:18.086734 [info ] [MainThread]: 
+[0m22:09:18.086734 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 18.28 seconds (18.28s).
+[0m22:09:18.095886 [debug] [MainThread]: Command end result
+[0m22:09:18.142606 [info ] [MainThread]: 
+[0m22:09:18.144800 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:09:18.145528 [info ] [MainThread]: 
+[0m22:09:18.149615 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:09:18.152492 [debug] [MainThread]: Command `dbt run` succeeded at 22:09:18.152492 after 21.20 seconds
+[0m22:09:18.152492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B300CA6A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B303CFB7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B315140970>]}
+[0m22:09:18.152492 [debug] [MainThread]: Flushing usage events

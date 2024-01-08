@@ -35,10 +35,6 @@ vars:
 
   currency_conversion_flag: True
   timezone_conversion_flag: False
-  raw_table_timezone_offset_hours: {
-    "Klaviyo.Raw.BRAND_US_Klaviyo_BQ_bounced_email":-7,
-    "Klaviyo.Raw.BRAND_US_Klaviyo_BQ_clicked_sms":-7
-  }
 
   # Variables used for dbt-tests
   'dbt_date:time_zone': 'America/Los_Angeles'
@@ -69,101 +65,30 @@ vars:
   KlaviyoSubscribedToList: True
   KlaviyoUnsubscribed: True
   KlaviyoUnsubscribedFromList: True
-  
-  klaviyo_bounced_email_tbl_ptrn: '%klaviyo%bounced_email'
-  klaviyo_bounced_email_tbl_exclude_ptrn: ''
+
   klaviyo_bounced_email_lookback: 2592000000
-
-  klaviyo_campaigns_tbl_ptrn: '%klaviyo%campaigns'
-  klaviyo_campaigns_tbl_exclude_ptrn: ''
   klaviyo_campaigns_lookback: 2592000000
-
-  klaviyo_clicked_email_tbl_ptrn: '%klaviyo%clicked_email'
-  klaviyo_clicked_email_tbl_exclude_ptrn: ''
   klaviyo_clicked_email_lookback: 2592000000
-
-  klaviyo_clicked_sms_tbl_ptrn: '%klaviyo%clicked_sms'
-  klaviyo_clicked_sms_tbl_exclude_ptrn: ''
   klaviyo_clicked_sms_lookback: 2592000000
-
-  klaviyo_consented_to_receive_sms_tbl_ptrn: '%klaviyo%consented_to_receive_sms'
-  klaviyo_consented_to_receive_sms_tbl_exclude_ptrn: ''
   klaviyo_consented_to_receive_sms_lookback: 2592000000
-
-  klaviyo_dropped_email_tbl_ptrn: '%klaviyo%dropped_email'
-  klaviyo_dropped_email_tbl_exclude_ptrn: ''
   klaviyo_dropped_email_lookback: 2592000000
-
-  klaviyo_failed_to_deliver_sms_tbl_ptrn: '%klaviyo%failed_to_deliver_sms'
-  klaviyo_failed_to_deliver_sms_tbl_exclude_ptrn: ''
   klaviyo_failed_to_deliver_sms_lookback: 2592000000
-
-  klaviyo_flow_actions_tbl_ptrn: '%klaviyo%flow_actions'
-  klaviyo_flow_actions_tbl_exclude_ptrn: ''
   klaviyo_flow_actions_lookback: 2592000000
-
-  klaviyo_flow_messages_tbl_ptrn: '%klaviyo%flow_messages'
-  klaviyo_flow_messages_tbl_exclude_ptrn: ''
   klaviyo_flow_messages_lookback: 2592000000
-
-  klaviyo_flows_tbl_ptrn: '%klaviyo%flows'
-  klaviyo_flows_tbl_exclude_ptrn: ''
   klaviyo_flows_lookback: 2592000000
-
-  klaviyo_lists_tbl_ptrn: '%klaviyo%lists'
-  klaviyo_lists_tbl_exclude_ptrn: ''
   klaviyo_lists_lookback: 2592000000
-
-  klaviyo_marked_email_as_spam_tbl_ptrn: '%klaviyo%marked_email_as_spam'
-  klaviyo_marked_email_as_spam_tbl_exclude_ptrn: ''
   klaviyo_marked_email_as_spam_lookback: 2592000000
-
-  klaviyo_metrics_tbl_ptrn: '%klaviyo%metrics'
-  klaviyo_metrics_tbl_exclude_ptrn: ''
   klaviyo_metrics_lookback: 2592000000
-
-  klaviyo_opened_email_tbl_ptrn: '%klaviyo%opened_email'
-  klaviyo_opened_email_tbl_exclude_ptrn: ''
   klaviyo_opened_email_lookback: 2592000000
-
-  klaviyo_opened_push_tbl_ptrn: '%klaviyo%opened_push'
-  klaviyo_opened_push_tbl_exclude_ptrn: ''
   klaviyo_opened_push_lookback: 2592000000
-
-  klaviyo_placed_order_tbl_ptrn: '%klaviyo%placed_order'
-  klaviyo_placed_order_tbl_exclude_ptrn: ''
   klaviyo_placed_order_lookback: 2592000000
-
-  klaviyo_received_email_tbl_ptrn: '%klaviyo%received_email'
-  klaviyo_received_email_tbl_exclude_ptrn: ''
   klaviyo_received_email_lookback: 2592000000
-
-  klaviyo_received_push_tbl_ptrn: '%klaviyo%received_push'
-  klaviyo_received_push_tbl_exclude_ptrn: ''
   klaviyo_received_push_lookback: 2592000000
-
-  klaviyo_received_sms_tbl_ptrn: '%klaviyo%received_sms'
-  klaviyo_received_sms_tbl_exclude_ptrn: ''
   klaviyo_received_sms_lookback: 2592000000
-
-  klaviyo_segments_tbl_ptrn: '%klaviyo%segments'
-  klaviyo_segments_tbl_exclude_ptrn: ''
   klaviyo_segments_lookback: 2592000000
-
-  klaviyo_sent_sms_tbl_ptrn: '%klaviyo%sent_sms'
-  klaviyo_sent_sms_tbl_exclude_ptrn: ''
   klaviyo_sent_sms_lookback: 2592000000
-
-  klaviyo_subscribed_to_list_tbl_ptrn: '%klaviyo%subscribed_to_list'
-  klaviyo_subscribed_to_list_tbl_exclude_ptrn: ''
   klaviyo_subscribed_to_list_lookback: 2592000000
-
-  klaviyo_unsubscribed_tbl_ptrn: '%klaviyo%unsubscribed'
-  klaviyo_unsubscribed_tbl_exclude_ptrn: ''
   klaviyo_unsubscribed_lookback: 2592000000
-
-  klaviyo_unsubscribed_from_list_tbl_ptrn: '%klaviyo%unsubscribed_from_list'
-  klaviyo_unsubscribed_from_list_tbl_exclude_ptrn: ''
   klaviyo_unsubscribed_from_list_lookback: 2592000000
 
 # These configurations specify where dbt should look for different types of files.

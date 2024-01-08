@@ -4,51 +4,21 @@
 {{ config( enabled = False ) }}
 {% endif %}
 
-{% set relations = dbt_utils.get_relations_by_pattern(
-schema_pattern=var('raw_schema'),
-table_pattern=var('klaviyo_received_push_tbl_ptrn'),
-exclude=var('klaviyo_received_push_tbl_exclude_ptrn'),
-database=var('raw_database')) %}
-
-{% for i in relations %}
-    {% if var('get_brandname_from_tablename_flag') %}
-        {% set brand =replace(i,'`','').split('.')[2].split('_')[var('brandname_position_in_tablename')] %}
-    {% else %}
-        {% set brand = var('default_brandname') %}
-    {% endif %}
-
-    {% if var('get_storename_from_tablename_flag') %}
-        {% set store =replace(i,'`','').split('.')[2].split('_')[var('storename_position_in_tablename')] %}
-    {% else %}
-        {% set store = var('default_storename') %}
-    {% endif %}
-
-{% if var('timezone_conversion_flag') and i.lower() in tables_lowercase_list and i in var('raw_table_timezone_offset_hours') %}
-        {% set hr = var('raw_table_timezone_offset_hours')[i] %}
-    {% else %}
-        {% set hr = 0 %}
-    {% endif %}
-
-    
+{# /*--calling macro for tables list and remove exclude pattern */ #}
+{% set result =set_table_name('klaviyo_received_push_tbl_ptrn','%klaviyo%received_push','klaviyo_received_push_tbl_exclude_ptrn','') %}
+{# /*--iterating through all the tables */ #}
+{% for i in result %}
         select
-        '{{brand}}' as brand,
-        '{{id}}' as store,
+        {{ extract_brand_and_store_name_from_table(i, var('brandname_position_in_tablename'), var('get_brandname_from_tablename_flag'), var('default_brandname')) }} as brand,
+        {{ extract_brand_and_store_name_from_table(i, var('storename_position_in_tablename'), var('get_storename_from_tablename_flag'), var('default_storename')) }} as store,
         type,
-        coalesce(id, 'NA') as id,
+        coalesce(id) as id,
         {{extract_nested_value("attributes","metric_id","string")}} as attributes_metric_id,
         {{extract_nested_value("attributes","profile_id","string")}} as attributes_profile_id,
         timestamp_millis({{extract_nested_value("attributes","timestamp","int64")}}) as attributes_timestamp,
         {{extract_nested_value("event_properties","flow","string")}} as event_properties_flow,
         {{extract_nested_value("event_properties","message","string")}} as event_properties_message,
-        {{extract_nested_value("event_properties","cohort_message_send_cohort","string")}} as event_properties_cohort_message_send_cohort,
-        /*{{extract_nested_value("event_properties","Subject","string")}} as event_properties_Subject,
-        {{extract_nested_value("event_properties","Campaign_Name","string")}} as event_properties_Campaign_Name,*/
-        /*{{extract_nested_value("event_properties","Email_Domain","string")}} as event_properties_Email_Domain,*/
-        /*{{extract_nested_value("event_properties","message_interaction","string")}} as event_properties_message_interaction,
-        {{extract_nested_value("event_properties","ESP","numeric")}} as event_properties_ESP,
-        {{extract_nested_value("event_properties","machine_open","string")}} as event_properties_machine_open,
-        {{extract_nested_value("event_properties","group_ids","string")}} as event_properties_group_ids,*/
-        {{extract_nested_value("event_properties","event_id","string")}} as event_properties_event_id,
+        {{extract_nested_value("event_properties","cohort_message_send_cohort","string")}} as event_properties_cohort_message_send_cohort,        {{extract_nested_value("event_properties","event_id","string")}} as event_properties_event_id,
         {{extract_nested_value("event_properties","x","string")}} as event_properties_x,
         {{extract_nested_value("event_properties","c","string")}} as event_properties_c,
         {{extract_nested_value("event_properties","t","numeric")}} as event_properties_t,
@@ -70,37 +40,19 @@ database=var('raw_database')) %}
         {{extract_nested_value("extra","badge","boolean")}} as extra_badge,
         {{extract_nested_value("extra","message_body","string")}} as extra_message_body,
         {{extract_nested_value("_extra","___customer_merge___","boolean")}} as _extra__customer_merge__,
-        /*{{extract_nested_value("event_properties","Message Title","string")}} as event_properties_Message_Title,*/
-        /*{{extract_nested_value("event_properties","Push Platform","string")}} as event_properties_Push_Platform,*/
-        /*{{extract_nested_value("event_properties","Push Token","string")}} as event_properties_Push_Token,*/
-        /*{{extract_nested_value("event_properties","Vendor Code","numeric")}} as event_properties_Vendor_Code,*/
-        /*{{extract_nested_value("event_properties","Error Description","string")}} as event_properties_Error_Description,*/
-        /*{{extract_nested_value("event_properties","Error Name","string")}} as event_properties_Error_Name,*/
         {% if target.type == 'snowflake' %}
-        safe_cast({{ dbt.dateadd(datepart="hour", interval=hr, from_date_or_timestamp="event_properties.value:timestamp") }} as {{ dbt.type_timestamp() }}) as event_properties_timestamp,
+        {{timezone_conversion("event_properties.value:timestamp")}} as event_properties_timestamp,
         {% else %}
-        safe_cast({{ dbt.dateadd(datepart="hour", interval=hr, from_date_or_timestamp="event_properties.timestamp") }} as {{ dbt.type_timestamp() }}) as event_properties_timestamp,
+        {{timezone_conversion("event_properties.value:timestamp")}} as event_properties_timestamp,
         {% endif %}
-        {% if var('timezone_conversion_flag') %}
-           datetime(datetime_add(cast(datetime as timestamp), interval {{hr}} hour )) as datetime,
-        {% else %}
-           datetime(timestamp(datetime)) as datetime,
-        {% endif %}
-        {% if var('timezone_conversion_flag') %}
-           date(datetime_add(cast(datetime as timestamp), interval {{hr}} hour )) as date,
-        {% else %}
-           date(timestamp(datetime)) as date,
-        {% endif %}
+        {{timezone_conversion('replace(replace(left(datetime,19),"T"," "),"Z",":00")')}} as datetime,
+        date({{timezone_conversion('replace(replace(left(datetime,19),"T"," "),"Z",":00")')}}) date,
         uuid,
         {{extract_nested_value("links","self","string")}} as links_self,
         _daton_user_id,
         _daton_batch_runtime,
         _daton_batch_id,
-        {% if var('timezone_conversion_flag') %}
-           datetime_add(cast(datetime as timestamp), interval {{hr}} hour ) as _edm_eff_strt_ts,
-        {% else %}
-           cast(datetime as timestamp) as _edm_eff_strt_ts,
-        {% endif %}
+        {{timezone_conversion('replace(replace(left(datetime,19),"T"," "),"Z",":00")')}} as _edm_eff_strt_ts,
         null as _edm_eff_end_ts,
         unix_micros(current_timestamp()) as _edm_runtime
         from {{i}} a

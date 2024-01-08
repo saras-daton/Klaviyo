@@ -1,41 +1,20 @@
-
 {% if var('KlaviyoCampaigns') %}
 {{ config( enabled = True ) }}
 {% else %}
 {{ config( enabled = False ) }}
 {% endif %}
 
-{% set relations = dbt_utils.get_relations_by_pattern(
-schema_pattern=var('raw_schema'),
-table_pattern=var('klaviyo_campaigns_tbl_ptrn'),
-exclude=var('klaviyo_campaigns_tbl_exclude_ptrn'),
-database=var('raw_database')) %}
-
-{% for i in relations %}
-    {% if var('get_brandname_from_tablename_flag') %}
-            {% set brand =replace(i,'`','').split('.')[2].split('_')[var('brandname_position_in_tablename')] %}
-        {% else %}
-            {% set brand = var('default_brandname') %}
-        {% endif %}
-
-        {% if var('get_storename_from_tablename_flag') %}
-            {% set store =replace(i,'`','').split('.')[2].split('_')[var('storename_position_in_tablename')] %}
-        {% else %}
-            {% set store = var('default_storename') %}
-        {% endif %}
-
-    {% if var('timezone_conversion_flag') and i.lower() in tables_lowercase_list and i in var('raw_table_timezone_offset_hours') %}
-        {% set hr = var('raw_table_timezone_offset_hours')[i] %}
-    {% else %}
-        {% set hr = 0 %}
-    {% endif %}
+{# /*--calling macro for tables list and remove exclude pattern */ #}
+{% set result =set_table_name('klaviyo_campaigns_tbl_ptrn','%klaviyo%campaigns','klaviyo_campaigns_tbl_exclude_ptrn','') %}
+{# /*--iterating through all the tables */ #}
+{% for i in result %}
 
         select
-        '{{brand|replace("`","")}}' as brand,
-        '{{store|replace("`","")}}' as store,
+        {{ extract_brand_and_store_name_from_table(i, var('brandname_position_in_tablename'), var('get_brandname_from_tablename_flag'), var('default_brandname')) }} as brand,
+        {{ extract_brand_and_store_name_from_table(i, var('storename_position_in_tablename'), var('get_storename_from_tablename_flag'), var('default_storename')) }} as store,
         '{{id}}' as Country,
         a.object,	
-        coalesce(a.id, 'NA') as id,
+        a.id as id,
         a.name,	   	   	
         a.subject,	   	   	
         a.from_email,	   	   	
@@ -79,11 +58,11 @@ database=var('raw_database')) %}
         from {{i}} a
         {{unnesting("lists")}}
         {{unnesting("excluded_lists")}}
-    {% if is_incremental() %}
+        {% if is_incremental() %}
             {# /* -- this filter will only be applied on an incremental run */ #}
             where _daton_batch_runtime  >= (select coalesce(max(_daton_batch_runtime) - {{ var('klaviyo_campaigns_lookback') }},0) from {{ this }})
             {% endif %}
-    qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
+        qualify row_number() over (partition by id order by _daton_batch_runtime desc) = 1
     {% if not loop.last %} union all {% endif %}
 {% endfor %}
 

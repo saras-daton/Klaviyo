@@ -1,40 +1,18 @@
-
 {% if var('KlaviyoMetrics') %}
 {{ config( enabled = True ) }}
 {% else %}
 {{ config( enabled = False ) }}
 {% endif %}
 
-{% set relations = dbt_utils.get_relations_by_pattern(
-schema_pattern=var('raw_schema'),
-table_pattern=var('klaviyo_metrics_tbl_ptrn'),
-exclude=var('klaviyo_metrics_tbl_exclude_ptrn'),
-database=var('raw_database')) %}
-
-{% for i in relations %}
-    {% if var('get_brandname_from_tablename_flag') %}
-            {% set brand =replace(i,'`','').split('.')[2].split('_')[var('brandname_position_in_tablename')] %}
-        {% else %}
-            {% set brand = var('default_brandname') %}
-        {% endif %}
-
-        {% if var('get_storename_from_tablename_flag') %}
-            {% set store =replace(i,'`','').split('.')[2].split('_')[var('storename_position_in_tablename')] %}
-        {% else %}
-            {% set store = var('default_storename') %}
-        {% endif %}
-
-   {% if var('timezone_conversion_flag') and i.lower() in tables_lowercase_list and i in var('raw_table_timezone_offset_hours') %}
-        {% set hr = var('raw_table_timezone_offset_hours')[i] %}
-    {% else %}
-        {% set hr = 0 %}
-    {% endif %}
-
+{# /*--calling macro for tables list and remove exclude pattern */ #}
+{% set result =set_table_name('klaviyo_metrics_tbl_ptrn','%klaviyo%metrics','klaviyo_metrics_tbl_exclude_ptrn','') %}
+{# /*--iterating through all the tables */ #}
+{% for i in result %}
         select
-        '{{brand|replace("`","")}}' as brand,
-        '{{store|replace("`","")}}' as store,
+        {{ extract_brand_and_store_name_from_table(i, var('brandname_position_in_tablename'), var('get_brandname_from_tablename_flag'), var('default_brandname')) }} as brand,
+        {{ extract_brand_and_store_name_from_table(i, var('storename_position_in_tablename'), var('get_storename_from_tablename_flag'), var('default_storename')) }} as store,
         type,
-        coalesce(a.id, 'NA') as id,
+        coalesce(a.id) as id,
         {{extract_nested_value("attributes","name","string")}} as attributes_name,
         datetime(timestamp(case when regexp_contains(attributes.created, r'.*T.{5}Z') then REGEXP_EXTRACT(attributes.created,r'(.*T.{5})Z') ||':00' else attributes.created end  ),'America/New_York' ) as created_time,
         datetime(timestamp(case when regexp_contains(attributes.updated, r'.*T.{5}Z') then REGEXP_EXTRACT(attributes.updated,r'(.*T.{5})Z') ||':00' else attributes.updated end  ),'America/New_York' ) as updated,
